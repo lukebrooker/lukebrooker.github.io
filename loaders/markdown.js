@@ -9,13 +9,13 @@ const highlight = (str, lang) => {
   if ((lang !== null) && hljs.getLanguage(lang)) {
     try {
       return hljs.highlight(lang, str).value
-    } catch (_error ) {
+    } catch (_error) {
       console.error(_error)
     }
   }
   try {
     return hljs.highlightAuto(str).value
-  } catch (_error ) {
+  } catch (_error) {
     console.error(_error)
   }
   return ''

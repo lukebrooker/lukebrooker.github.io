@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { RouteHandler, Link } from 'react-router'
-import { link } from 'gatsby-helpers'
+import { RouteHandler } from 'react-router'
+import Link from '../../components/Link'
 
 export default class extends Component {
-  render() {
+  render () {
     return (
       <div>
-        <h1><Link to={link('/work/')}>Work</Link></h1>
+        <h1><Link to='/work/'>Work</Link></h1>
         <RouteHandler {...this.props}/>
       </div>
     )

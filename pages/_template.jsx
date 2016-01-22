@@ -1,29 +1,35 @@
-import React from 'react'
-import { RouteHandler, Link } from 'react-router'
+import React, { Component, PropTypes } from 'react'
+import { RouteHandler } from 'react-router'
+import Heading from '../components/Heading'
+import Link from '../components/Link'
+import Logo from '../components/Logo'
 import { link } from 'gatsby-helpers'
-import { rhythm, fontSizeToMS } from 'utils/typography'
 
-import '../css/styles.css'
+import '../css/base.css'
+import '../css/atomic.css'
 
-export default class extends React.Component {
-  render() {
-    let header
-    if (this.props.state.path === link('/')) {
-      header = (
-        <h1 style={{  fontSize: fontSizeToMS(2.5).fontSize,  lineHeight: fontSizeToMS(2.5).lineHeight,  marginBottom: rhythm(1.5)}}>
-          <Link style={{  textDecoration: 'none',  color: 'inherit'}} to={link('/')} > {this.props.config.pageTitle} </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h2><Link style={{  textDecoration: 'none',  color: 'inherit'}} to={link('/')} > {this.props.config.pageTitle} </Link></h2>
-      )
-    }
+export default class Template extends Component {
+  render () {
+    const {state, config} = this.props
     return (
-    <div>
-      {header}
+    <div className='D(f) Fld(c) H(100%)'>
+      {(state.path === link('/'))
+        ? undefined
+        : (
+        <div className='D(f) Ai(c)'>
+          <Link to='/'><Logo /></Link>
+          <Heading level='2'>
+            <Link to='/'>{config.siteTitle}</Link>
+          </Heading>
+        </div>
+      )}
       <RouteHandler {...this.props}/>
     </div>
     )
   }
+}
+
+Template.propTypes = {
+  state: PropTypes.object,
+  config: PropTypes.object
 }

@@ -1,24 +1,21 @@
 import React, { Component } from 'react'
-import { RouteHandler, Link } from 'react-router'
-import { sortBy } from 'lodash'
 import DocumentTitle from 'react-document-title'
-import { link } from 'gatsby-helpers'
+import Link from '../../components/Link'
 
 export default class Writing extends Component {
   render () {
     const {
       pages,
-      config,
-      ...props
+      config
     } = this.props
     console.log(pages)
     return (
-      <DocumentTitle title={config.blogTitle}>
+      <DocumentTitle title={config.htmlTitle}>
         <div>
           <ul>
             {pages.map((page, key) => {
               return (page.data && (page.path.indexOf('/writing/') !== -1))
-                ? (<li key={key}><Link to={link(page.path)}>{page.data.title}</Link></li>)
+                ? (<li key={key}><Link to={page.path}>{page.data.title}</Link></li>)
                 : undefined
             })}
           </ul>

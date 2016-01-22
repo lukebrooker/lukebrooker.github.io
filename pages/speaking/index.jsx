@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { RouteHandler, Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
-import { link } from 'gatsby-helpers'
+import Link from '../../components/Link'
 
 export default class Speaking extends Component {
   render () {
@@ -11,12 +10,12 @@ export default class Speaking extends Component {
       ...props
     } = this.props
     return (
-      <DocumentTitle title={config.blogTitle}>
+      <DocumentTitle title={config.htmlTitle}>
         <div>
           <ul>
             {pages.map((page, key) =>
               (page.data && (page.path.indexOf('/speaking/') !== -1))
-                ? (<li key={key}><Link to={link(page.path)}>{page.data.title}</Link></li>)
+                ? (<li key={key}><Link to={page.path}>{page.data.title}</Link></li>)
                 : undefined
               )
             }
