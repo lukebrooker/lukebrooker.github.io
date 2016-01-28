@@ -270,15 +270,15 @@
 .P\(rh\) {
   padding: 0.75rem;
 }
-.Px\(rq\) {
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-}
 .Px\(r1\), .Pstart\(r1\) {
   padding-left: 1.5rem;
 }
 .Px\(r1\) {
   padding-right: 1.5rem;
+}
+.Px\(rq\) {
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
 }
 .Px\(rh\) {
   padding-left: 0.75rem;
@@ -290,11 +290,11 @@
 .Py\(rh\) {
   padding-bottom: 0.75rem;
 }
-.Pt\(100\%\) {
-  padding-top: 100%;
-}
 .Pt\(r1\) {
   padding-top: 1.5rem;
+}
+.Pt\(100\%\) {
+  padding-top: 100%;
 }
 .Pt\(11\.1\%\) {
   padding-top: 11.1%;
