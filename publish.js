@@ -19,7 +19,9 @@ function copyPresentations (cb) {
 }
 
 function copyToBranch (cb) {
-  ghpages.publish(path.join(__dirname, 'public'), function (err) {
+  ghpages.publish(path.join(__dirname, 'public'), {
+    branch: 'master'
+  }, function (err) {
     if (err) return console.error(err)
     console.log('Pushed to github pages')
     if (typeof cb === 'function') cb()
