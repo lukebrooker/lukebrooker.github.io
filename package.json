@@ -4,7 +4,8 @@
   "description": "The personal site of Luke Brooker",
   "main": "n/a",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "svg": "svg-sprite -sD components/Icons --symbol-dest '' --ss icons.svg --si components/Icons/svgs/*.svg"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "http://lukebrooker.com",
   "dependencies": {
+    "classnames": "^2.2.3",
     "lodash": "^3.10.1",
     "moment": "^2.10.3",
     "react": "^0.14.3",
@@ -27,14 +29,17 @@
     "react-dom": "^0.14.3",
     "react-router": "^0.13.5",
     "typography": "^0.6.2",
-    "underscore.string": "^3.2.2"
+    "underscore.string": "^3.2.2",
+    "webfontloader": "^1.6.20"
   },
   "devDependencies": {
     "atomic-loader": "^0.1.3",
+    "autoprefixer-loader": "^3.2.0",
     "eslint-config-standard": "^4.4.0",
     "eslint-config-standard-react": "^1.2.1",
     "eslint-plugin-react": "^3.15.0",
     "eslint-plugin-standard": "^1.3.1",
+    "exports-loader": "^0.6.2",
     "front-matter": "^2.0.5",
     "highlight.js": "^9.1.0",
     "marked": "^0.3.5"

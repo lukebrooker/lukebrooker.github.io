@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Logo = ({
-  className = 'W(r1) H(r1) Miw(r1) Mih(r1) Maw(r1) Mah(r1)'
+  className = 'W(r1) H(r1) W(r1h)--md H(r1h)--md Miw(r1) Mih(r1) Maw(r2) Mah(r2)'
 }) => {
   const classes = 'Pos(r) M(rh) ' + className
   return (

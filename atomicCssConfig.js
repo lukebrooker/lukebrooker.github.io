@@ -1,6 +1,16 @@
-function pxToRem (value, baseFontSize) {
+function pxTo (value, baseFontSize, unit) {
   baseFontSize = baseFontSize || '16'
-  return +(value / baseFontSize).toFixed(3) + 'rem'
+  return +(value / baseFontSize).toFixed(3) + unit
+}
+
+// function pxToRem (value, baseFontSize) {
+//   baseFontSize = baseFontSize || '16'
+//   return pxTo(value, baseFontSize, 'rem')
+// }
+
+function pxToEm (value, baseFontSize) {
+  baseFontSize = baseFontSize || '16'
+  return pxTo(value, baseFontSize, 'em')
 }
 
 // Calculate Rhythm
@@ -24,11 +34,13 @@ module.exports = {
   cssDest: './css/atomic.css',
   configs: {
     breakPoints: {
-      osm: '@media screen and (min-width: ' + pxToRem(470) + ') and (max-width: ' + pxToRem(879) + ')',
-      sm: '@media screen and (min-width: ' + pxToRem(470) + ')',
-      omd: '@media screen and (min-width: ' + pxToRem(880) + ') and (max-width: ' + pxToRem(1199) + ')',
-      md: '@media screen and (min-width: ' + pxToRem(880) + ')',
-      lg: '@media screen and (min-width: ' + pxToRem(1200) + ')'
+      osm: '@media screen and (min-width: ' + pxToEm(470) + ') and (max-width: ' + pxToEm(879) + ')',
+      sm: '@media screen and (min-width: ' + pxToEm(470) + ')',
+      omd: '@media screen and (min-width: ' + pxToEm(880) + ') and (max-width: ' + pxToEm(1199) + ')',
+      md: '@media screen and (min-width: ' + pxToEm(880) + ')',
+      lg: '@media screen and (min-width: ' + pxToEm(1200) + ')',
+      port: '@media screen and (orientation:portrait)',
+      land: '@media screen and (orientation:landscape)'
     },
     custom: {
       // Colours
@@ -40,7 +52,10 @@ module.exports = {
       // Borders
       bd1: 'solid 1px',
       bd2: 'solid 2px',
+      chunky: 'solid .375rem',
       // Rhythm
+      nrh: r(-0.5),
+      nrq: r(-0.25),
       re: r(0.125),
       rq: r(0.25),
       rh: r(0.5),
@@ -66,8 +81,8 @@ module.exports = {
       ms5: ms(5),
       ms6: ms(6),
       // Fonts
-      lbsans: '"Input Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-      lbmono: 'Input, Hack, Consolas, monaco, monospace',
+      lbsans: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
+      lbmono: '"Source Code Pro", Input, Hack, Consolas, monaco, monospace',
       // Border Radius
       rnd: '500px',
       // Shadows
@@ -94,6 +109,37 @@ module.exports = {
     classNames: [
       'Lh(1.5)',
       'Ff(lbsans)',
+      'Op(1)!',
+      'Mt(r2)',
+      'Mb(r1)',
+      'Cur(d)!',
+      'Fw(800)',
+      'List(s)',
+      'Pstart(r1)',
+      'Mx(0)',
+      'My(r1h)',
+      'My(r2)',
+      'Bdstart(chunky)',
+      'Fz(ms1)',
+      'Op(.6)',
+      'Ov(h)',
+      'Bdrs(re)',
+      'Bxsh(sh1)',
+      'Bxsh(sh4)',
+      'Bxsh(ish1)',
+      'Pos(r)',
+      'Z(1)',
+      'Mx(a)',
+      'H(0)',
+      'Pt(4%)',
+      'Maw(15rem)',
+      'Bdrs(r1)',
+      'Bgc(#fff)',
+      'Px(rh)',
+      'Pt(rh)',
+      'Pb(r1)',
+      'Pb(r1h)',
+      'D(b)'
     ]
   }
 }

@@ -24,8 +24,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-weight: normal;
+h6,
+p {
+  font-weight: inherit;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -42,27 +43,19 @@ a {
 }
 
 a {
-  transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-a:link {
-  opacity: .7;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  opacity: .9;
-  text-decoration: underline;
-}
-
-a:active {
-  opacity: 1;
   text-decoration: none;
 }
 
 img {
   max-width: 100%;
+}
+
+hr {
+  opacity: .3;
+  width: 3rem;
+  border-top: .375rem solid;
+  border-bottom: none;
+  margin: 2.25rem 0;
 }
 
 button::-moz-focus-inner,

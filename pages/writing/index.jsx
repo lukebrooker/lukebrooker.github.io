@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import DocumentTitle from 'react-document-title'
+import moment from 'moment'
 import Link from '../../components/Link'
 
 export default class Writing extends Component {
@@ -8,19 +9,27 @@ export default class Writing extends Component {
       pages,
       config
     } = this.props
-    console.log(pages)
     return (
       <DocumentTitle title={config.htmlTitle}>
         <div>
-          <ul>
-            {pages.map((page, key) => {
-              return (page.data && (page.path.indexOf('/writing/') !== -1))
-                ? (<li key={key}><Link to={page.path}>{page.data.title}</Link></li>)
-                : undefined
-            })}
-          </ul>
+          {pages.map((page, key) => {
+            console.log(page)
+            return (page.data && (page.path.indexOf('/writing/') !== -1))
+              ? (<div key={key} className='Mb(r2)'>
+                <h2 className='Fz(ms2) Fw(600)'><Link className='Link' to={page.path}>{page.data.title}</Link></h2>
+                <div className='Fz(msn1) Tt(u) Op(.6) Mb(rh)'>{moment(page.data.date).format('MMMM D, YYYY')}</div>
+                <p className='Mb(rh)'>{page.data.teaser}</p>
+                <p><Link className='Link Fz(msn1)' to={page.path}>Read more</Link></p>
+              </div>)
+              : undefined
+          })}
         </div>
       </DocumentTitle>
     )
   }
+}
+
+Writing.propTypes = {
+  pages: PropTypes.object,
+  config: PropTypes.object
 }

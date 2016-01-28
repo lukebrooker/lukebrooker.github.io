@@ -1,7 +1,8 @@
 ---
 title: 'Craft as in Beer'
 date: "2014-03-28T22:12:03.284Z"
-category: articles
+category: article
+teaser: "In a sea of news, trends, frameworks, and other noise, it's important to focus on our craft."
 ---
 
 Last night I spoke at the excellent "[What Do You Know](http://www.webdirections.org/events/wdyk-brisbane-mar2014/)" event, run by [Web Directions](http://www.webdirections.org). Since [my slides](/presentations/craft-as-in-beer) are not exactly self explanatory, I thought I would post this alongside them to help those who missed the event.

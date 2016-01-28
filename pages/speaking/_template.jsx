@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import { RouteHandler } from 'react-router'
-import Link from '../../components/Link'
+import Content from '../../components/Content'
 
 export default class extends Component {
   render () {
     return (
-      <div>
-        <h1><Link to='/speaking/'>Speaking</Link></h1>
+      <Content>
         <RouteHandler {...this.props}/>
-      </div>
+      </Content>
     )
   }
 }

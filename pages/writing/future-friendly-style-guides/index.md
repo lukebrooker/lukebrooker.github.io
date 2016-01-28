@@ -1,8 +1,8 @@
 ---
 title: 'Future Friendly Style Guides'
-category: articles
-created: '2012-03-03'
+category: article
 date: "2012-03-03T22:12:03.284Z"
+teaser: "In a device agnostic world, our workflows need to be more adaptive."
 ---
 
 There has been a lot of talk of responsive design workflow, layout, sensors and more lately, especially with the recent #responsivesummit hubbub. And why wouldn't there be, with all the excitement and potential surrounding responsive design, we are now starting to see it implemented in larger businesses and across a border range of projects. So what's the problem?
@@ -32,11 +32,11 @@ In the past most online style guides have included the basic elements of a websi
 
 One obvious example is navigation menus. Usually formed with the new nav element and then an unordered list containing links. The way we display this has generally been in the form of a horizontal or vertical bar.
 
-![Horizontal Menu](/uploads/horizontal-menu.jpg)
+![Horizontal Menu](horizontal-menu.jpg)
 
 This is what we call a design pattern, these are not new either. But recently I have noticed a greater focus on patterns, especially when it comes to mobile patterns, as these are fairly new.
 
-![Mobile Menu](/uploads/mobile-menu.jpg)
+![Mobile Menu](mobile-menu.jpg)
 
 So now, with responsive design, we have the same component being used but with a different design pattern depending on it's environment.
 
@@ -45,6 +45,7 @@ People are realising this and I think it is why we have started to see more patt
 Back to style guides, the two things that sparked my interest in this topic were Anna Debenham's 24 Ways article and Kyle Neath's Knyle Style Sheets. The first of which explains the many benefits of creating a style guide in our current environment and second is specification on how to document your CSS as well as a ruby gem to pass the documentation and create a "living style guide".
 
 ## An Idea
+
 All of these tools, libraries and articles cumulated in an idea. What if in the responsive design workflow, we could have a dynamic, documented style guide that can be generated from new and established patterns which could be a starting point for each project and then customised accordingly. So taking ideas from each of the tools I had seen I created Pattern Response, a project similar in structure to Jeremy Keith's Pattern Primer but with the ability to structure elements, components and patterns into folders and navigate to them easily on one generated style guide. All within a responsive layout, to make testing components at different widths possible.
 
 Pattern Response can be used for more than just a responsive style guide to send to a client. It can be used to document all the components of a site to pass on to a developer. It can also be used to keep a library of your collected and created patterns to reference on new projects. I have even used it to include only the components a client would be able to use in their wysiwyg editor, with an example and explanation of each element and component. What ever html files you throw into the patterns folder it will generate on the page along with it's documentation and a way to navigate to it (through a menu or search).

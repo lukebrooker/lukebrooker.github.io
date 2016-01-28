@@ -11,7 +11,7 @@ export default class Html extends React.Component {
     } = this.props
     const pageTitle = title || DocumentTitle.rewind()
     return (
-      <html lang='en' className='H(100%)'>
+      <html lang='en' className='H(100%) Fz(ms0) Fz(ms1)--omd Fz(ms2)--lg Lh(1.5)'>
       <head>
         <meta charSet='utf-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
@@ -21,7 +21,7 @@ export default class Html extends React.Component {
         </title>
         <link rel='shortcut icon' href={favicon} />
       </head>
-      <body className='H(100%) Miw(300px) M(0) Lh(1.5) Ff(lbsans) Bgc(dark) C(#fff.9)'>
+      <body className='H(100%) Miw(300px) M(0) Ff(lbmono) Bgc(dark) C(#fff.9) Lts(-0.003) Wds(-0.01)'>
         <div id='react-mount' className='H(100%)' dangerouslySetInnerHTML={{__html: body}} />
         <script src={link('/bundle.js')} />
       </body>

@@ -12,5 +12,9 @@ module.exports = function (config, env) {
     cfg.loaders.unshift('atomic-loader?configPath=' + __dirname + '/atomicCssConfig.js')
     return cfg
   })
+  config.loader('css', function (cfg) {
+    cfg.loaders.push('autoprefixer?browsers=last 2 versions')
+    return cfg
+  })
   return config
 }
