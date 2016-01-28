@@ -1,0 +1,132 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Luke Brooker, https://github.com/lukebrooker. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+@import "compass";
+
+// Default mixins and settings -----------------
+@import "../../reveal.js/css/theme/template/mixins";
+@import "../../reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Gentium Book Basic', Georgia, Times, 'Times New Roman', serif;
+$mainColor: #33363B;
+$headingFont: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingFontWeight: 800;
+$headingAlternateFont: 'Gentium Book Basic', Georgia, Times, 'Times New Roman', serif;
+$headingColor: #33363B;
+$headingTextShadow: none;
+$headingTextTransform: uppercase;
+$backgroundColor: #F0F0ED;
+$linkColor: #176F8E;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+
+// Theme template ------------------------------
+@import "../../reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+
+//  2012 Styles
+//  -----------
+
+.reveal {
+  letter-spacing: -0.02em;
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: $headingFontWeight;
+    span {
+      text-transform: none;
+      font-style: italic;
+      font-size: .8em;
+      font-weight: 400;
+      font-family: $headingAlternateFont;
+    }
+  }
+  h1 {
+    font-size: 2.4em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  blockquote {
+    padding: 1em;
+    margin-bottom: .75em;
+  }
+  pre code {
+    padding: 0 1em;
+  }
+  section {
+    img {
+      border: none;
+      @include box-shadow(none);
+      background: none;
+    }
+  }
+  .roll {
+    padding: 0 .25em;
+  }
+}
+
+//  Custom
+//  ------
+
+.reveal {
+  .image-row {
+    img {
+      @include inline-block();
+    }
+  }
+  .callout {
+    padding: 1em;
+    margin: 0 0 1em;
+    background: #fcfcfc;
+    @include box-shadow(0 1px 2px rgba(0,0,0,0.2));
+  }
+  .pill {
+    @include border-radius(40px);
+    @include inline-block();
+    padding: .5em;
+    background: rgba(255,255,255,0.7);
+  }
+  .less & {
+    background: #79C3D2;
+  }
+  .sass & {
+    background: #CC6699;
+    h1, h2, h3, h4, h5, h6, p, ul {
+      color: #fff;
+    }
+  }
+  .compass & {
+    background: #c51507;
+    h1, h2, h3, h4, h5, h6, p, ul {
+      color: #eee;
+    }
+  }
+  .l-row {
+    margin: 0 -.5em;
+    .l-split {
+      width: 50%;
+      float: left;
+      padding: 0 .5em;
+      @include box-sizing(border-box);
+    }
+  }
+}

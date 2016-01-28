@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Thinking Outside the Box That Keeps Moving</title>
+
+    <meta name="description" content="Tips and Tricks for a Responsive Web">
+    <meta name="author" content="Luke Brooker">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../themes/css/lb2013-end.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1><span>Thinking Outside the Box That Keeps Moving</span></h1>
+          <hr>
+          <h3>Tips and Tricks for a Responsive Web</h3>
+          <p>
+            <a href="http://twitter.com/hakimel">@lukebrooker</a>
+          </p>
+        </section>
+
+        <section data-state="strong" data-background-transition="slide">
+          <h2 class="heading--neon">Responsive<br><span>Trivia</span></h2>
+          <aside class="notes">
+            How I am going to present this?
+            I also want to see "What you Learned"
+          </aside>
+        </section>
+
+        <section class="txt--align-center">
+          <h1>Round 1<br><span>Foundations</span></h1>
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="1">What meta tags are needed to make your site adapt to every devices size, <strong>no matter the orientation?</strong></h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">
+              <pre><code><meta name="viewport" content="width=device-width"></code></pre>
+            </li>
+            <li>
+              <pre><code><meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
+            </li>
+            <li class="fragment fade-out" data-fragment-index="1">
+              <pre><code><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></code></pre>
+            </li>
+            <li>
+              <pre><code>@viewport { width:device-width };</code></pre>
+              <p class="l--push-t-1-2"><small class="fragment" data-fragment-index="1">*Bug in IE10 mobile, fix is rolling out</small></p>
+            </li>
+          </ol>
+        </section>
+
+        <section data-state="strong" >
+          <h1>Demo</h1>
+          <ol class="list--lower-alpha">
+            <li><a href="http://cdpn.io/vAjcp">cdpn.io/vAjcp</a></li>
+            <li><a href="http://cdpn.io/DBAbL">cdpn.io/DBAbL</a></li>
+            <li><a href="http://cdpn.io/eyqgf">cdpn.io/eyqgf</a></li>
+          </ol>
+        </section>
+
+        <section data-markdown>
+          ### Further reading
+          * Preliminary meta viewport research:
+          [quirksmode.org/blog/archives/2013/10/preliminary_met.html](http://www.quirksmode.org/blog/archives/2013/10/preliminary_met.html)
+          * Responsive Design in IE10 on Windows Phone 8:
+          [mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html](http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html)
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="2"><strong>According to Apple</strong>, what is the minimum size a touch target should be?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">40px</li>
+            <li>44px</li>
+            <li class="fragment fade-out" data-fragment-index="1">45px</li>
+            <li class="fragment fade-out" data-fragment-index="1">57px</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Keep your designs finger friendly</h2>
+          <p>Try for at least 8-10mm with some spacing</p>
+          <p><img src="http://i.stack.imgur.com/DEY9X.png"></p>
+          <aside class="notes">
+            As more desktop operating systems enable touch, even on desktop we should be aiming for large touch targets.
+          </aside>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * Touch Target Sizes:
+            [lukew.com/ff/entry.asp?1085](http://www.lukew.com/ff/entry.asp?1085)
+          * On Touch Target Size:
+            [maya.com/the-feed/on-touch-target-size](http://www.maya.com/the-feed/on-touch-target-size)
+        </section>
+
+        <section class="txt--align-center">
+          <h2><span>Tip:</span> Build components</h2>
+          <aside class="notes">
+            Cut down on repetition
+          </aside>
+        </section>
+
+        <section>
+          <h3>Web Components are coming</h3>
+
+          <pre><code>
+<my-widget></my-widget>
+          </code></pre>
+          <aside class="notes">
+            Encapsulate your components html, css and js
+          </aside>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * Improving Your Responsive Workflow with Style Guides:
+            [lukebrooker.com/presentations/improving-your-responsive-workflow-with-style-guides](http://lukebrooker.com/presentations/improving-your-responsive-workflow-with-style-guides)
+          * Web Components Revolution:
+            [robdodson.me/webcomponents-revolution](http://robdodson.me/webcomponents-revolution)
+        </section>
+
+        <section class="txt--align-center">
+          <h2><span>Tip: </span>Create guidelines<br>and stick to them</h2>
+        </section>
+
+        <section data-markdown class="txt--align-center">
+          ### Save yourself from yourself
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * [github.com/csswizardry/CSS-Guidelines](https://github.com/csswizardry/CSS-Guidelines)
+          * [github.com/lukebrooker/CSS-Guidelines](https://github.com/lukebrooker/CSS-Guidelines)
+          * [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+        </section>
+
+        <section class="txt--align-center">
+          <h1>Round 2<br><span>Adaption</span></h1>
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="1">What is the "best" unit of measurement to use across a responsive web site?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">px</li>
+            <li class="fragment fade-out" data-fragment-index="1">rems</li>
+            <li>ems</li>
+            <li class="fragment fade-out" data-fragment-index="1">vw &amp; vh</li>
+          </ol>
+        </section>
+
+        <section data-state="strong">
+          <h1>Demo</h1>
+          <ul>
+            <li>Pixels: <a href="http://getbootstrap.com/components">getbootstrap.com</a></li>
+            <li>Ems: <a href="http://zanata.org/">zanata.org</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Implementation</h3>
+          <ul>
+            <li>Use ems for almost all measurements</li>
+            <li>Base measurements on vertical rhythm</li>
+            <li>Use preprocessors to help (Sass, Stylus etc)</li>
+          </ul>
+        </section>
+
+        <section data-state="strong">
+          <h1>Demo</h1>
+          <p data-height="451" data-theme-id="0" data-slug-hash="rxAgq" data-user="lukebrooker" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/lukebrooker/pen/rxAgq'>Compass Vertical Rhythm</a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+          <script async src="//codepen.io/assets/embed/ei.js"></script>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          Rhythm & Grid | Mailchimp:
+          [http://bit.ly/1hWf7WP](http://bit.ly/1hWf7WP)
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="2">How do can we keep the aspect ratio of a video (or any other element) across different screen sizes?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">fitvids.js</li>
+            <li class="fragment fade-out" data-fragment-index="1"><code>max-width: 100%</code></li>
+            <li class="fragment fade-out" data-fragment-index="1"><code>max-height: 100%</code></li>
+            <li>Zero height padding hack</li>
+          </ol>
+        </section>
+
+        <section data-state="strong">
+          <h1>Demo</h1>
+          <div data-height="558" data-theme-id="0" data-slug-hash="Ctroe" data-user="lukebrooker" data-default-tab="css" class='codepen'><pre><code>@import &quot;compass&quot;;
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: rhythm(1) auto;
+  max-width: rhythm(40);
+}
+
+%media--ratio {
+  position: relative;
+  padding-top: rhythm(1);
+  height: 0;
+  margin: 0 0 rhythm(1);
+  overflow: hidden;
+  iframe,
+  object,
+  video,
+  .media--ratio__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.media--ratio-16-9 {
+  @extend %media--ratio;
+  padding-bottom: 56.25%; &#x2F;&#x2F; 16:9
+}
+
+.media--ratio-4-3 {
+  @extend %media--ratio;
+  padding-bottom: 75%; &#x2F;&#x2F; 4:3
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/lukebrooker/pen/Ctroe'>%= penName %></a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+</div><script async src="//codepen.io/assets/embed/ei.js"></script>
+          <a href="http://cdpn.io/Ctroe">cdpn.io/Ctroe</a>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          Creating Intrinsic Ratios for Video:
+          [alistapart.com/article/creating-intrinsic-ratios-for-video](http://alistapart.com/article/creating-intrinsic-ratios-for-video)
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="3">How could we make something that is hoverable on pointer devices, but touchable on touch devices?</h2>
+          <ol class="list--lower-alpha">
+            <li>Media Queries <span class="fragment fade-in" data-fragment-index="1">(Soon)</span></li>
+            <li class="fragment fade-out" data-fragment-index="1">Feature detection (e.g. Modernizr)</li>
+            <li>Custom javascript event handlers</li>
+            <li class="fragment fade-out" data-fragment-index="1">User agent detection</li>
+          </ol>
+        </section>
+
+        <section data-state="strong">
+          <h1>Demo</h1>
+          <p data-height="273" data-theme-id="0" data-slug-hash="aCiol" data-user="lukebrooker" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/lukebrooker/pen/aCiol'>Hover, click or touch drop down menu</a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+          <script async src="//codepen.io/assets/embed/ei.js"></script>
+          <a href="http://cdpn.io/aCiol">cdpn.io/aCiol</a>
+        </section>
+
+        <section>
+          <h2><span>But also…</span><br>New media queries are coming</h2>
+          <ul>
+            <li>Pointer</li>
+            <li>Hover</li>
+            <li>Luminosity</li>
+          </ul>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * [jordanm.co.uk/post/65776639602/responding-to-environmental-lighting-with-css-media](http://www.jordanm.co.uk/post/65776639602/responding-to-environmental-lighting-with-css-media)
+        </section>
+
+        <section class="txt--align-center">
+          <h2><span>Tip:</span> Be specific with breakpoints</h2>
+          <aside class="notes">
+            <ul>
+              <li>Don't override breakpoints</li>
+              <li>Use max-width and min-width</li>
+              <li>min/max height</li>
+              <li>Orientation breakpoints</li>
+              <li>The first breakpoint is no breakpoint</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * 7 Habits of Highly Effective Media Queries
+            [bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries](http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/)
+        </section>
+
+        <section class="txt--align-center">
+          <h1>Round 3<br><span>Performance</span></h1>
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="1">How do you remove the (300ms) lag from a touch event?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">fastclick.js</li>
+            <li class="fragment fade-out" data-fragment-index="1"><code>&lt;meta name="viewport" content="user-scalable=no"&gt;</code></li>
+            <li class="fragment fade-out" data-fragment-index="1">Use native javascript touch events</li>
+            <li>All of the above <span class="fragment fade-in" data-fragment-index="1">(But try not to use user-scalable=no)</span></li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>fastclick.js</h2>
+          <p><a href="https://github.com/ftlabs/fastclick">github.com/ftlabs/fastclick</a></p>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * Touch And Mouse - Together Again For The First Time: [html5rocks.com/en/mobile/touchandmouse](http://www.html5rocks.com/en/mobile/touchandmouse/)
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="2">What CSS is needed to speed up scrolling on iOS?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">z-index: 0</li>
+            <li class="fragment fade-out" data-fragment-index="1">overflow: scroll</li>
+            <li>-webkit-overflow-scrolling: touch</li>
+            <li class="fragment fade-out" data-fragment-index="1">scrolling: butter</li>
+          </ol>
+        </section>
+
+        <section data-state="strong" >
+          <h1>Demo</h1>
+          <ul>
+            <li><a href="http://cdpn.io/sltrB">cdpn.io/sltrB</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="3">What CSS propertie(s) can be used to animate cheaply? i.e. Keep frame rates at 60fps.</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">Position</li>
+            <li>Opacity</li>
+            <li class="fragment fade-out" data-fragment-index="1">Color</li>
+            <li>Transform</li>
+          </ol>
+        </section>
+
+        <section data-markdown>
+          * Opacity
+          * Transform
+            * Translate
+            * Rotate
+            * Scale
+        </section>
+
+        <section data-state="strong" >
+          <h1>Demo</h1>
+          <div class="media--ratio-16-9">
+            <iframe width="420" height="315" src="//www.youtube.com/embed/-62uPWUxgcg" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <aside class="notes">
+            <ul>
+              <li>Everything is on the same rendering layer</li>
+              <li>Opacity must be the only one in the layer</li>
+              <li>transform: translateZ(0) is an easy way to create a new layer</li>
+              <li>Careful too many layers can also cause jankiness</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          High Performance Animations: [html5rocks.com/en/tutorials/speed/high-performance-animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="4">What advantages do automation and build tools like Grunt, Bower and Yeoman have?</h2>
+          <ol class="list--lower-alpha small">
+            <li>Linting, concatenating and minifying JS &amp; CSS</li>
+            <li>Compiling CSS Preprocessors (Sass, Stylus etc)</li>
+            <li>Optimising images</li>
+            <li>Automatically scaffold new apps</li>
+            <li>Handle external dependencies</li>
+            <li>Recompile your project and refresh your browser on save</li>
+            <li>Automatically create icon fonts</li>
+            <li>Deploy your project</li>
+            <li>Inflate your ego</li>
+            <li class="fragment">All of the above</li>
+          </ol>
+        </section>
+
+        <section class="txt--align-center">
+          <img src="http://f.cl.ly/items/3z0s0t0V3I1M1R2B3v36/Screen%20Shot%202013-11-20%20at%201.31.22%20pm.JPG" alt="Grunt Compliment">
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          Automating Front-end Workflow
+          [speakerdeck.com/addyosmani/automating-front-end-workflow](https://speakerdeck.com/addyosmani/automating-front-end-workflow)
+        </section>
+
+        <section class="txt--align-center">
+          <h2><span>Tip:</span> Get to know your<br>Developer Tools</h2>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * Chrome DevTools: [developers.google.com/chrome-developer-tools](https://developers.google.com/chrome-developer-tools/)
+        </section>
+
+        <section class="txt--align-center">
+          <h1>Round 4<br><span>Images</span></h1>
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="1">What is the current front-runner as a responsive images solution?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">&lt;picture&gt;</li>
+            <li>src-N</li>
+            <li class="fragment fade-out" data-fragment-index="1">srcset</li>
+            <li class="fragment fade-out" data-fragment-index="2">Developers pulling their hair out</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>src-N </h2>
+          <pre><code>
+&lt;img
+  src="http://placehold.it/300.jpg"
+  src-1="(min-width: 300px) http://placehold.it/500.jpg"
+  src-2="(min-width: 500px) http://placehold.it/800.jpg"
+  alt="Placeholder Image"&gt;
+          </code></pre>
+        </section>
+
+        <section class="txt--align-center">
+          <h2><span>Tip:</span> Other image solutions</h2>
+        </section>
+
+        <section data-state="strong">
+          <h2>Clown Car Technique</h2>
+          <p data-height="506" data-theme-id="0" data-slug-hash="idLHt" data-user="lukebrooker" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/lukebrooker/pen/idLHt'>Clown Car Technique w/ Highly Compressed JPEG</a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+          <script async src="//codepen.io/assets/embed/ei.js"></script>
+          <a href="http://cdpn.io/idLHt">cdpn.io/idLHt</a>
+        </section>
+
+        <section data-markdown>
+          ### More image solutions
+          * The Lazy 1.5 times technique
+          * Paid services (e.g. [resrc.it](http://resrc.it))
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * Proposal for RespImg Syntax
+            [tabatkins.github.io/specs/respimg/Overview.html](http://tabatkins.github.io/specs/respimg/Overview.html)
+          * Responsive images – end of year report
+            [html5doctor.com/responsive-images-end-of-year-report](http://html5doctor.com/responsive-images-end-of-year-report)
+          * Clown Car Technique: Solving Adaptive Images In Responsive Web Design [bit.ly/1hW9hVc](http://bit.ly/1hW9hVc)
+        </section>
+
+        <section class="txt--align-center">
+          <img src="http://imgs.xkcd.com/comics/slideshow.gif" alt="Say no to carousels" width="500" height="625">
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="2">What browsers do not support SVG?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">&lt;= IE8</li>
+            <li class="fragment fade-out" data-fragment-index="1">&lt;= IE8 &amp; &lt;= Android Browser 2.3</li>
+            <li>&lt;= IE8, &lt;= Android Browser 2.3 &amp; Opera Mini <span class="fragment fade-in" data-fragment-index="1">(Sort of)</span></li>
+            <li class="fragment fade-out" data-fragment-index="1">&lt;= Android Browser 4.4 &amp; Opera Mini</li>
+          </ol>
+        </section>
+
+        <section data-state="strong" >
+          <h1>Demo</h1>
+          <p data-height="248" data-theme-id="0" data-slug-hash="curGk" data-user="lukebrooker" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/lukebrooker/pen/curGk'>curGk</a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
+        </section>
+
+        <section>
+          <h3>Further Reading</h3>
+
+          <ul>
+            <li>SVG and &lt;image&gt; tag tricks: <a href="http://lynn.ru/examples/svg/en.html">lynn.ru/examples/svg/en.html</a></li>
+          </ul>
+        </section>
+
+        <section class="txt--align-center">
+          <h1>Round 5<br><span>Layout</span></h1>
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="1">How could we set a fixed padding and margin but keep a fluid, defined width?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">flex-box</li>
+            <li>box-sizing: border-box</li>
+            <li class="fragment fade-out" data-fragment-index="1">max-width: 100%</li>
+            <li class="fragment fade-out" data-fragment-index="1">display: table-cell</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Replace all the box models!</h3>
+          <pre><code>
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+          </code></pre>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          [paulirish.com/2012/box-sizing-border-box-ftw](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+        </section>
+
+        <section class="txt--align-center">
+          <h2><span>Tip:</span> Inline block grids</h2>
+        </section>
+
+        <section data-state="strong" >
+          <h1>Demo</h1>
+          <p data-height="393" data-theme-id="0" data-slug-hash="GitgI" data-user="lukebrooker" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/lukebrooker/pen/GitgI'>GitgI</a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+          <script async src="//codepen.io/assets/embed/ei.js"></script>
+          <a href="http://cdpn.io/GitgI">cdpn.io/GitgI</a>
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="2">When should tables be used?</h2>
+          <ol class="list--lower-alpha">
+            <li class="fragment fade-out" data-fragment-index="1">For as much layout as possible</li>
+            <li>For tabular data</li>
+            <li class="fragment fade-out" data-fragment-index="1">For tabular data and forms</li>
+            <li class="fragment fade-out" data-fragment-index="1">Never</li>
+          </ol>
+        </section>
+
+        <section class="txt--align-center">
+          <h2>I've got 99 tables<br><span>and a responsive solution for each one.</span></h2>
+        </section>
+
+        <section data-state="strong">
+          <h2>Horizontal overflow</h2>
+          <p class="l--push-t-1-2">Easy</p>
+          <p data-height="330" data-theme-id="0" data-slug-hash="xFbKk" data-user="lukebrooker" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/lukebrooker/pen/xFbKk'>xFbKk</a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+          <script async src="//codepen.io/assets/embed/ei.js"></script>
+          <a href="http://cdpn.io/xFbKk">cdpn.io/xFbKk</a>
+        </section>
+
+        <section data-state="strong">
+          <h2>Priority Columns</h2>
+          <p class="l--push-t-1-2">For large amounts of data</p>
+          <div class="media--ratio-16-9 l--push-a-0">
+            <iframe src="http://filamentgroup.com/examples/rwd-table-patterns" frameborder="0" width="800" height="450" style="background-color: #eee;"></iframe>
+          </div>
+          <small class="l--push-t-0"><a href="http://filamentgroup.com/examples/rwd-table-patterns">filamentgroup.com/examples/rwd-table-patterns</a></small>
+        </section>
+
+        <section data-markdown>
+          ### Further Reading
+
+          * This is Responsive: [bradfrost.github.io/this-is-responsive/patterns.html#tables](http://bradfrost.github.io/this-is-responsive/patterns.html#tables)
+        </section>
+
+        <section>
+          <h2 class="heading--question" data-question="3">How do you keep this text from wrapping?</h2>
+          <p data-height="499" data-theme-id="0" data-slug-hash="zCEDe" data-user="lukebrooker" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/lukebrooker/pen/zCEDe'>zCEDe</a> by Luke Brooker (<a href='http://codepen.io/lukebrooker'>@lukebrooker</a>) on <a href='http://codepen.io'>CodePen</a></p>
+          <script async src="//codepen.io/assets/embed/ei.js"></script>
+        </section>
+
+        <section class="txt--align-center">
+          <h3>Finally</h3>
+        </section>
+
+        <section class="txt--align-center">
+          <h2>When should you use carousels?</h2>
+        </section>
+
+        <section class="size--large txt--align-center">
+          <h1>Never.</h1>
+        </section>
+
+        <section>
+          <h2>Thanks</h2>
+          <p class="l--push-t-1-2">Now it's your turn for questions.</p>
+          <a href="http://twitter.com/lukebrooker">@lukebrooker</a>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

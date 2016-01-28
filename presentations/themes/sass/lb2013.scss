@@ -1,0 +1,250 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is #176F8E.
+ *
+ * This theme is Copyright (C) 2012 Luke Brooker, https://github.com/lukebrooker. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+@import "compass";
+
+// Default mixins and settings -----------------
+@import "../../reveal.js/css/theme/template/mixins";
+@import "../../reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,800);
+// @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+// @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+// $mainFont: 'Gentium Book Basic', Georgia, Times, 'Times New Roman', serif;
+$mainFont: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mainColor: #33363B;
+$headingFont: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingFontWeight: 800;
+$headingAlternateFont: 'Gentium Book Basic', Georgia, Times, 'Times New Roman', serif;
+$headingColor: #33363B;
+$headingTextShadow: none;
+$headingTextTransform: uppercase;
+$backgroundColor: #f7f7f7;
+$linkColor: #176F8E;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+
+// Theme template ------------------------------
+@import "../../reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+
+//  2013 Styles
+//  -----------
+
+.reveal {
+  letter-spacing: -0.02em;
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: $headingFontWeight;
+    letter-spacing: -.05em;
+    span {
+      text-transform: none;
+      letter-spacing: - .025em;
+      font-size: .9em;
+      font-weight: 200;
+      // font-family: $headingAlternateFont;
+    }
+  }
+  h1 {
+    font-size: 2.4em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  blockquote {
+    padding: 1em;
+    margin: 0 auto rhythm(.5);
+    width: auto;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: 200;
+    font-style: normal;
+  }
+  dl {
+    font-size: 1em;
+    cite {
+      margin: 1em 0;
+      text-align: right;
+      display: block;
+      font-weight: 200;
+    }
+  }
+  dt {
+    font-weight: 700;
+  }
+  .quote figcaption {
+    width: auto;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: right;
+  }
+  pre {
+    width: auto;
+  }
+  pre code {
+    padding: 0 1em;
+  }
+  section {
+    img {
+      border: none;
+      @include box-shadow(none);
+      background: none;
+      margin: 0;
+    }
+  }
+  .slides {
+    text-align: left;
+  }
+  .roll {
+    padding: 0 .25em;
+  }
+}
+
+//  Custom
+//  ------
+
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+.reveal {
+  .image-row {
+    img {
+      @include inline-block();
+    }
+  }
+  .restricted {
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .callout {
+    padding: 1em;
+    margin: 0 0 1em;
+    background: #fcfcfc;
+    @include box-shadow(0 1px 2px rgba(0,0,0,0.2));
+  }
+  .pill {
+    @include border-radius(40px);
+    @include inline-block();
+    padding: .5em;
+    background: rgba(255,255,255,0.7);
+  }
+  .l-pull-down-dbl {
+    margin-bottom: - rhythm(10);
+    position: relative;
+    top: 2em;
+  }
+  .l-pull-down {
+    margin-bottom: - rhythm(6);
+  }
+  .l-pull-down-half {
+    margin-bottom: - rhythm(3);
+  }
+  .ratio-wrapper {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: - rhythm(3);
+    iframe,
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // IYRWWSG
+  .bright & {
+    background: #3399cc;
+    h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+      color: #f7f7f7;
+    }
+  }
+  .many-faces & {
+    background: #3399cc url("../../improving-your-responsive-workflow-with-style-guides/img/manyfaces.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  .gd & {
+    background: #fff url("../../improving-your-responsive-workflow-with-style-guides/img/gd.jpg") center top no-repeat;
+    background-size: contain;
+  }
+  .doesthat & {
+    background: #f7f7f7 url("../../improving-your-responsive-workflow-with-style-guides/img/doesthatsoundlike-dark.jpg") center center no-repeat;
+    background-size: cover;
+    h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+      color: #f7f7f7;
+    }
+  }
+  .strong & {
+    background: #222;
+    h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+      color: #f7f7f7;
+    }
+  }
+  .complex & {
+    background: #444;
+    h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+      color: #f7f7f7;
+    }
+  }
+  .go & {
+    background: #6fbf4d;
+    h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+      color: #f7f7f7;
+    }
+  }
+
+  // WIMFLTS
+  .less & {
+    background: #79C3D2;
+  }
+  .sass & {
+    background: #CC6699;
+    h1, h2, h3, h4, h5, h6, p, ul {
+      color: #fff;
+    }
+  }
+  .compass & {
+    background: #c51507;
+    h1, h2, h3, h4, h5, h6, p, ul {
+      color: #eee;
+    }
+  }
+
+  .l-row {
+    margin: 0 -.5em;
+    .l-split {
+      width: 50%;
+      float: left;
+      padding: 0 .5em;
+      @include box-sizing(border-box);
+    }
+  }
+}

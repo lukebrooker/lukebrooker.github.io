@@ -1,0 +1,403 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is #176F8E.
+ *
+ * This theme is Copyright (C) 2012 Luke Brooker, https://github.com/lukebrooker. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+@import "compass";
+
+// Default mixins and settings -----------------
+@import "../../reveal.js/css/theme/template/mixins";
+@import "../../reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,800);
+// @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+// @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+// $mainFont: 'Gentium Book Basic', Georgia, Times, 'Times New Roman', serif;
+$mainFont: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mainColor: #33363B;
+$headingFont: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingFontWeight: 800;
+$headingAlternateFont: 'Gentium Book Basic', Georgia, Times, 'Times New Roman', serif;
+$headingColor: #33363B;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fcfcfc;
+$linkColor: #5c9;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+
+// Theme template ------------------------------
+@import "../../reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+
+//  2013 Styles
+//  -----------
+
+.reveal {
+  letter-spacing: -0.02em;
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: $headingFontWeight;
+    letter-spacing: -.05em;
+    span {
+      letter-spacing: - .025em;
+      font-size: .9em;
+      font-weight: 200;
+      // font-family: $headingAlternateFont;
+    }
+  }
+  h1 {
+    font-size: 2.4em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  blockquote {
+    padding: 1em;
+    margin: 0 auto rhythm(.5);
+    width: auto;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: 200;
+    font-style: normal;
+  }
+  dl {
+    font-size: 1em;
+    cite {
+      margin: 1em 0;
+      text-align: right;
+      display: block;
+      font-weight: 200;
+    }
+  }
+  dt {
+    font-weight: 700;
+  }
+  .quote figcaption {
+    width: auto;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: right;
+  }
+  pre {
+    width: auto;
+  }
+  pre code {
+    padding: 0 1em;
+  }
+  section {
+    img {
+      border: none;
+      @include box-shadow(none);
+      background: none;
+      margin: 0;
+    }
+  }
+  .slides {
+    text-align: left;
+  }
+  .roll {
+    padding: 0 .25em;
+  }
+}
+
+//  Custom
+//  ------
+
+.text-right,
+.txt--align-right {
+  text-align: right;
+}
+.text-center,
+.txt--align-center {
+  text-align: center;
+}
+
+.heading--neon {
+  .reveal & {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0;
+    @include adjust-font-size-to(44px);
+    span {
+      font-size: 188%;
+      font-weight: 500;
+      letter-spacing: .023em;
+      position: relative;
+      margin-left: .07em;
+    }
+  }
+  .present & {
+    -webkit-animation-name: turnonlights;
+    -webkit-animation-duration: 3.0s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: steps(2, start);
+    -moz-animation-name: turnonlights;
+    -moz-animation-duration: 3.0s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-timing-function: steps(2, start);
+  }
+}
+
+.reveal {
+  p {
+    margin-top: rhythm(1);
+  }
+  ul, ol {
+    display: block;
+    li {
+      margin-bottom: rhythm(.5);
+    }
+  }
+  .heading--question {
+    @include adjust-font-size-to(24px, 1.25);
+    font-weight: 400;
+    position: relative;
+    padding-left: rhythm(1, 24px);
+    &:before {
+      content: attr(data-question);
+      position: absolute;
+      left: rhythm(-.5, 24px);
+      top: 0;
+      background-color: $linkColor;
+      border-radius: 100px;
+      color: $backgroundColor;
+      width: rhythm(1.25, 24px);
+      height: rhythm(1.25, 24px);
+      text-align: center;
+    }
+  }
+  .list--no-bullets {
+    padding: 0;
+    margin: 0;
+    @include no-bullets;
+  }
+  .list--lower-alpha {
+    list-style-type:lower-alpha;
+    margin-left: rhythm(1);
+    &.small {
+      li {
+        @include adjust-font-size-to(14px);
+        margin-bottom: 0;
+      }
+    }
+    li {
+      position: relative;
+      padding: 0;
+      margin-bottom: rhythm(.25);
+      &:before {
+        content: "";
+        height: 0;
+      }
+    }
+    pre {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+    }
+    pre code {
+      overflow: auto;
+      padding: rhythm(.5);
+    }
+  }
+  %media--ratio {
+    position: relative;
+    padding-top: rhythm(1);
+    height: 0;
+    margin: 0 0 rhythm(1);
+    overflow: hidden;
+    iframe,
+    object,
+    video,
+    .media--ratio__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .media--ratio-16-9 {
+    @extend %media--ratio;
+    padding-bottom: 56.25%; // 16:9
+  }
+
+  .media--ratio-4-3 {
+    @extend %media--ratio;
+    padding-bottom: 75%; // 4:3
+  }
+  .size--large {
+    @include adjust-font-size-to(24px);
+  }
+  .size--small {
+    @include adjust-font-size-to(12px);
+  }
+  .image-row {
+    img {
+      @include inline-block();
+    }
+  }
+  .restricted {
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .callout {
+    padding: 1em;
+    margin: 0 0 1em;
+    background: #fcfcfc;
+    @include box-shadow(0 1px 2px rgba(0,0,0,0.2));
+  }
+  .pill {
+    @include border-radius(40px);
+    @include inline-block();
+    padding: .5em;
+    background: rgba(255,255,255,0.7);
+  }
+  .l-pull-down-dbl {
+    margin-bottom: - rhythm(10);
+    position: relative;
+    top: 2em;
+  }
+  .l--push-a-0 {
+    margin: 0;
+  }
+  .l--push-t-0 {
+    margin-top: 0;
+  }
+  .l--push-t-1-2 {
+    margin-top: rhythm(.5);
+  }
+  .l--push-t-1 {
+    margin-top: rhythm(1);
+  }
+  .l--push-t-2 {
+    margin-top: rhythm(2);
+  }
+  .l-pull-down {
+    margin-bottom: - rhythm(6);
+  }
+  .l-pull-down-half {
+    margin-bottom: - rhythm(3);
+  }
+  .ratio-wrapper {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: - rhythm(3);
+    iframe,
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .strong & {
+    background: #222;
+    h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
+      color: #f7f7f7;
+    }
+  }
+  .complex & {
+    background: #444;
+    h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+      color: #f7f7f7;
+    }
+  }
+  .go & {
+    background: #6fbf4d;
+    h1, h2, h3, h4, h5, h6, p, ul, blockquote {
+      color: #f7f7f7;
+    }
+  }
+
+  .l-row {
+    margin: 0 -.5em;
+    .l-split {
+      width: 50%;
+      float: left;
+      padding: 0 .5em;
+      @include box-sizing(border-box);
+    }
+  }
+}
+
+@-webkit-keyframes turnonlights {
+    0%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    1%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    4%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    7%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    8%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    12%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    22%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    23%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    26%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    28%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    34%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    36%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    42%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    55%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    60%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    63%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    67%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    72%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    73%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    76%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    78%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    84%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    86%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    96%    { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    100%    { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+}
+@-moz-keyframes turnonlights {
+    0%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    1%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    4%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    7%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    8%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    12%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    22%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    23%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    26%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    28%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    34%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    36%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    42%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    55%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    60%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    63%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    67%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    72%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    73%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    76%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    78%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    84%        { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+    86%        { color: #667469; text-shadow: 0 0 3px #636c61, 0 0 5px #636c61; }
+    96%    { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 17px saturate($linkColor, 10%), 0 0 38px saturate($linkColor, 10%)}
+    100%    { color: $linkColor; text-shadow: 0 0 5px tint($linkColor, 20%), 0 0 10px tint($linkColor, 20%), 0 0 15px tint($linkColor, 20%), 0 0 20px saturate($linkColor, 10%), 0 0 30px saturate($linkColor, 10%), 0 0 40px saturate($linkColor, 10%); }
+}

@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Improving Your Responsive Workflow with Style Guides</title>
+
+    <meta name="description" content="Description">
+    <meta name="author" content="Luke Brooker">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../themes/css/lb2013.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section data-state="title">
+          <h1 class="pres-title">
+            <span>Improving Your Responsive Workflow with</span><br>Style Guides
+          </h1>
+          <p>
+            <!-- Front End |  --><a href="http://twitter.com/lukebrooker">@lukebrooker</a>
+          </p>
+        </section>
+
+        <section data-state="gd">
+
+        </section>
+
+        <section>
+          <h2>
+            <span>The Web is inherently</span><br>
+            <strong>fluid</strong><br>
+            <strong class="fragment">responsive</strong><br>
+            <strong class="fragment">adaptive</strong><br>
+            <strong class="fragment">flexible</strong>
+          </h2>
+        </section>
+        <section>
+          <h2>
+            <span>We can't</span><br>
+            control<br>
+            <span>web &#8220;pages&#8221;</span>
+          </h2>
+        </section>
+        <section>
+          <h2>
+            &#8220;Designers&#8221;<br>don't like this<br>
+            <span>Mockups as deliverables don't work</span>
+            <span class="fragment">(Unless you are a masochist)</span>
+          </h2>
+        </section>
+        <section>
+          <h2>Stop<br><span>thinking of it as</span><br>responsive web design</h2>
+        </section>
+        <section>
+          <h2>It's more<br>than just</h2>
+          <ul>
+            <li>Fluid grids</li>
+            <li>Flexible images</li>
+            <li>Media queries</li>
+          </ul>
+        </section>
+        <section>
+          <figure class="quote">
+            <blockquote>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</blockquote>
+            <figcaption class="fragment">–Tim Berners-Lee</figcaption>
+          </figure>
+        </section>
+        <section>
+          <h2>
+            <span>Think of it as a </span><br>
+            universal system<br>
+            <span>with a</span><br>
+            consistent experience
+          </h2>
+        </section>
+        <section>
+          <h1>Design Systems<br><span>Not Pages</span></h1>
+        </section>
+
+        <section>
+          <h2>
+            <span>We're not controlling &#8220;pages&#8221;<br>
+            but, creating a</span><br>
+            consistent experience
+          </h2>
+        </section>
+
+        <section>
+          <h1>The Core</h1>
+        </section>
+
+        <section>
+          <h2>Content<br>
+          <span>Useful, structured<br>and consistent data</span>
+          </h2>
+        </section>
+
+        <section>
+          <section>
+            <h2>
+              Design<br>
+              <span>typography, colour, layout,<br>
+              visual hierarchy and interaction</span>
+            </h2>
+          </section>
+          <section>
+            <h2>Design process</h2>
+          </section>
+          <section>
+            <h3>Design atmosphere</h3>
+            <h3><span>style tiles, pattern sheets,<br>experimental mockups</span></h3>
+          </section>
+          <section>
+            <h3>
+              Design structure<br>
+              <span>screen and component wireframes</span>
+            </h3>
+          </section>
+          <section>
+            <h3>
+              Prototypes<br>
+              <span>atmosphere and structure combine</span>
+            </h3>
+          </section>
+          <section>
+            <h3><span>How do we</span><br>design efficiently?</h3>
+            <h3 class="fragment"><span>How do we</span><br>keep it consistent?</h3>
+          </section>
+          <section>
+            <h3>
+              Design consistency<br>
+              <span>Style guides</span>
+            </h3>
+          </section>
+        </section>
+
+        <section data-state="bright">
+          <section data-state="many-faces">
+            <h2>
+              <span>The many faces of</span><br>
+              style guides
+            </h2>
+          </section>
+          <section>
+            <h2>Brand <span class="fragment text-right">/ mailchimp.com</span></h2>
+            <div class="fragment l-pull-down">
+              <img src="img/mailchimp.jpg">
+            </div>
+          </section>
+          <section>
+            <h2>Editorial <span class="fragment text-right">/ alistapart.com</span></h2>
+            <div class="fragment l-pull-down">
+              <img src="img/alistapart.jpg">
+            </div>
+          </section>
+          <section>
+            <h2>Code <span class="fragment text-right">/ isobar.com</span></h2>
+            <div class="fragment l-pull-down">
+              <img src="img/isobar.jpg">
+            </div>
+          </section>
+          <section>
+            <h2>Code <span class="fragment text-right">/ drupal.org</span></h2>
+            <div class="fragment l-pull-down">
+              <img src="img/drupal.jpg">
+            </div>
+          </section>
+        </section>
+
+        <section data-state="strong">
+          <section>
+            <h2>User Interface <span class="fragment text-right">/ bbc.co.uk</span></h2>
+            <div class="fragment l-pull-down">
+              <img src="img/bbc.jpg">
+            </div>
+          </section>
+          <section>
+            <h3><span>Global</span> Experience<span> Language</span></h3>
+            <h3><span class="fragment">Universal</span> <strong class="fragment">Experience</strong> <span class="fragment">System</span></h3>
+          </section>
+          <section>
+            <h3 class="restricted">Language <span>/ Oxford dictionary</span></h3>
+            <blockquote>
+              2. A <strong>system</strong> of communication used by a particular country or community.
+            </blockquote>
+          </section>
+          <section>
+            <h3>
+              Style guides / design system<br>
+              <span>dictionary / language</span>
+            </h3>
+          </section>
+          <section>
+            <h2>UI/Systems <span class="fragment text-right">/ foundation</span></h2>
+            <div class="fragment l-pull-down">
+              <img src="img/foundation.jpg">
+            </div>
+          </section>
+          <section>
+            <h2>UI/Systems <span class="fragment text-right">/ bootstrap</span></h2>
+            <div class="fragment l-pull-down">
+              <img src="img/bootstrap.jpg">
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Lessons<br><span>Bootstrap/Foundation</span></h2>
+          </section>
+          <section>
+            <h3><span>Abstracted components +<br>
+              Decoupled layout =</span><br>
+              D.R.Y.er Code</h3>
+          </section>
+          <section>
+            <div class="l-row">
+              <div class="l-split"><h2>SMACSS<br>OOCSS<br>&amp; BEM</h2></div>
+              <div class="l-split fragment"><h2><span>Flexible<br>D.R.Y.<br>Systems</span></h2></div>
+            </div>
+          </section>
+          <section>
+            <h2>Advantages<br><span>Bootstrap/Foundation</span></h2>
+            <ul>
+              <li class="fragment">A lot of basic problems are already solved</li>
+              <li class="fragment">Predictable, consistent design</li>
+              <li class="fragment">Collaboration is easier</li>
+              <li class="fragment">You can test ideas quickly</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Disadvantages<br><span>Bootstrap/Foundation</span></h2>
+            <ul>
+              <li class="fragment">Guidelines are general</li>
+              <li class="fragment">More pattern library than style guides</li>
+              <li class="fragment">Cookie cutter design</li>
+              <li class="fragment">Coding standards of others</li>
+              <li class="fragment">Most don't take the time to understand the code</li>
+              <li class="fragment">Your problems are usually different <br>to those they try to solve</li>
+            </ul>
+          </section>
+          <section data-state="doesthat">
+            <div  class="l-pull-down-dbl">
+              <h2>Your own &#8220;Bootstrap&#8221;<br><br><span>Does that sound like something you might be interested in?</span></h2>
+            </div>
+          </section>
+          <section>
+            <blockquote>My project isn't big enough</blockquote>
+          </section>
+          <section>
+            <blockquote>Style guides take too long</blockquote>
+          </section>
+        </section>
+
+        <section data-state="bright">
+          <section>
+            <h2><span>Building a style guide…</span><br>quickly</h2>
+          </section>
+          <section>
+            <h2>Slow Style Guides</h2>
+            <ul class="fragment">
+              <li>Static Image based</li>
+              <li>Pears</li>
+              <li>Patternry</li>
+              <li>KSS (Knyle Style Sheets)</li>
+              <li>Pattern Primer/Pattern Response</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Remove as much<br>friction as possible</h3>
+          </section>
+          <section>
+            <h2>Rapid Style Guides</h2>
+          </section>
+          <section>
+            <h3>Styledocco</h3>
+            <div class="fragment ratio-wrapper">
+              <iframe src="http://jacobrask.github.com/styledocco/" frameborder="0"></iframe>
+            </div>
+          </section>
+          <section>
+            <h3>Kalei Styleguide</h3>
+            <div class="fragment ratio-wrapper">
+              <iframe src="http://kaleistyleguide.com" frameborder="0"></iframe>
+            </div>
+          </section>
+          <section>
+            <h3 class="restricted">Example</h3>
+            <div class="restricted l-pull-down-half">
+              <img src="img/bs-example.jpg" alt="">
+            </div>
+          </section>
+          <section>
+            <h3 class="restricted">Example <span>/ code</span></h3>
+            <pre class="restricted"><code class="css" contenteditable>
+/*
+## Typographic components
+
+### Hero Unit
+
+A lightweight, flexible component to showcase key content on your site. It works well on marketing and content-heavy sites.
+
+```
+&lt;div class=&quot;hero-unit&quot;&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class=&quot;btn btn-primary btn-large&quot;&gt;
+      Learn more
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+```
+*/
+
+.hero-unit {
+  //Styles
+}
+            </code></pre>
+          </section>
+          <section>
+            <h2>Advantages<br><span>Rapid Style Guides</span></h2>
+            <ul>
+              <li>Created as you code</li>
+              <li>No extra file up-keep</li>
+              <li>Makes the CSS easier to read</li>
+              <li>We can use them to design &amp; test components</li>
+              <li>Helps designers &amp; developers collaborate</li>
+              <li>Multiple versions for clients &amp; developers</li>
+            </ul>
+          </section>
+          <section>
+            <h2>It's not perfect<br><span>I would like to see…</span></h2>
+            <ul>
+              <li>Better usability</li>
+              <li>Context altering</li>
+              <li>File agnostic</li>
+              <li>Isolation</li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-state="strong">
+          <section>
+            <h2>Implementing<br><span>UI Style Guides</span></h2>
+          </section>
+          <section>
+            <h3>Settings<br><span>start with<br>design atmosphere</span></h3>
+          </section>
+          <section>
+            <h3>Settings</h3>
+            <ul>
+              <li>Typography</li>
+              <li>Colours</li>
+              <li>Baseline</li>
+              <li>Common breakpoints</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Elements<span><br>work out the basics</span></h3>
+          </section>
+          <section>
+            <h3>Elements</h3>
+            <ul>
+              <li>Normalise</li>
+              <li>Applying the Settings or <q>Atmoshphere</q> to basic HTML elements</li>
+              <li>These are the parts of the system that don't change too much across contexts</li>
+              <li>Their documentation can be reused between projects</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Layout<span><br>create some structure</span></h3>
+          </section>
+          <section>
+            <h3>Layout</h3>
+            <ul>
+              <li>Grid Systems (How will they adapt?)</li>
+              <li>What are your containers?</li>
+              <li>Structure, nothing else</li>
+              <li>Based off screen wireframes</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Components<br><span>Identify Patterns</span></h3>
+          </section>
+          <section>
+            <h3>This is where it gets interesting</h3>
+          </section>
+          <section data-state="complex">
+            <h3>Components</h3>
+            <ul>
+              <li>Use everything you have learned so far</li>
+              <li>Sketch out ideas first</li>
+              <li>Use in conjunction with prototypes</li>
+              <li>Design Universally</li>
+            </ul>
+          </section>
+          <section data-state="complex">
+            <h3>Purpose</h3>
+            <ul>
+              <li>What does this need to be used for?</li>
+              <li>What tasks will it perform?</li>
+            </ul>
+          </section>
+          <section data-state="complex">
+            <h3>Purpose<span> / e.g. navigation</span></h3>
+            <ul>
+              <li>Allow an easy, usable way for users to access the content they need</li>
+              <li>Convey where the user currently is to avoid confusion</li>
+            </ul>
+          </section>
+          <section data-state="complex">
+            <h3>Context</h3>
+            <ul>
+              <li>Screen size</li>
+              <li>Container size</li>
+              <li>Location/Heirachy</li>
+              <li>Device Features</li>
+            </ul>
+          </section>
+          <section data-state="complex">
+            <h3>Adaption</h3>
+            <ul>
+              <li>Structure</li>
+              <li>Size</li>
+              <li>Content (Careful)</li>
+              <li>Interactions</li>
+            </ul>
+          </section>
+          <section data-state="complex">
+            <h3>Context <span>causes</span> Adaption</h3>
+          </section>
+          <section data-state="complex">
+            <h3>In practice</h3>
+            <ul>
+              <li>Are there patterns that already work?</li>
+              <li>Is it worth breaking existing patterns?</li>
+            </ul>
+          </section>
+          <section data-state="complex">
+            <h3  class="restricted">Example<span> / navigation</span></h3>
+            <pre class="restricted"><code class="css" contenteditable>
+/*
+
+### Nav Bar
+
+The nav bar is one of the most important components of the site, it needs to:
+- Allow an easy usable way to get around
+- Convey where the user currently is
+
+- On **small screens** the items are *hidden* and a toggle link is *displayed as an iconfont*, unless **`.fontface`** is not detected in which "menu" text is *a fallback*.
+  - If **`.no-js`** is detected a fallback nav in the footer should *be displayed* and the toggle anchor link will point to that.
+  - The navigation should *animate a slide down* on toggle unless **`.no-csstransforms3d`** is detected in which case it will just *display with no animation*.
+  - The **`.banner-hero`** component should always be *positioned above* this as it has a higher `z-index` to hide the inactive menu
+- **medium** screens and up should *display the full nav at all times*. *Expanding* to allow more padding as **screens get larger**.
+- **At all sizes besides small landscape** the nav-bar will *stick to the top of the page on scroll* and also *display a back to top icon*.
+  - Nav bar items should always show their active state with colored side or bottom border.
+
+```
+&lt;div class=&quot;banner__navigation&quot; id=&quot;banner__navigation&quot;&gt;<br/>  &lt;nav role=&quot;navigation&quot; class=&quot;navigation&quot;&gt;<br/>    &lt;div class=&quot;nav--bar__toggle&quot;&gt;<br/>      &lt;a href=&quot;#&quot; class=&quot;nav--bar__toggle__top&quot; title=&quot;Go to top of page&quot; id=&quot;nav--bar__toggle__top&quot;&gt;&lt;/a&gt;<br/>      &lt;a href=&quot;#main-nav&quot; class=&quot;nav--bar__toggle__menu&quot; id=&quot;nav--bar__toggle__menu&quot; title=&quot;Show menu&quot;&gt;&lt;/a&gt;<br/>    &lt;/div&gt;<br/>    &lt;ul class=&quot;nav--bar&quot;&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Who We Are&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a class=&quot;active&quot; href=&quot;#&quot;&gt;What We Do&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Our Work&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;nav--bar__highlight is-visible--small&quot;&gt;&lt;a href=&quot;tel:0738791740&quot;&gt;&lt;span&gt;Call:&lt;/span&gt; (+617) 3879 1740&lt;/a&gt;&lt;/li&gt;<br/>    &lt;/ul&gt;<br/>  &lt;/nav&gt;<br/>&lt;/div&gt;
+```
+
+*/
+            </code></pre>
+          </section>
+          <section data-state="complex">
+            <h3>Example<span> / navigation</span></h3>
+            <img src="img/eg-navigation.jpg">
+          </section>
+          <section data-state="complex">
+            <h3>Dependencies/references</h3>
+            <ul>
+              <li>Other components it uses</li>
+              <li>What elements it should be used with</li>
+              <li>Javascript files</li>
+              <li>Source preprocessor file</li>
+              <li>Fonts</li>
+              <li>Images</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Other areas</h3>
+            <ul>
+              <li>States</li>
+              <li>Theme/skin</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Results in</h2>
+          <ul>
+            <li>Allows for a more agile workflow</li>
+            <li>It helps optimise your code by giving designers and developers a greater understanding of what is happening</li>
+           <li> It's documented with the site. (If you need to go back to it, it's easier to understand the stupid mistakes you made, you will make them)</li>
+            <li>Useful for even small sites (At the very least for settings and elements)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Takeaways</h2>
+          <ul>
+            <li>Design consistent systems and experiences using <q>atmosphere</q> and structure</li>
+            <li>Use a collaborative work-flow</li>
+            <li>Make systems quick and easy to build and maintain</li>
+            <li>Build on past experiences and resources</li>
+            <li>Abstract components and think about purpose, context and adaption</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Thanks</h2>
+          <h4>Questions?</h4>
+          <p>
+            <!-- <a href="http://bit.ly/dc2013luke">Node 843</a> |  --><a href="http://bit.ly/luke-sg">bit.ly/luke-sg</a> | <a href="http://twitter.com/lukebrooker">@lukebrooker</a>
+          </p>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        mouseWheel: false,
+        rollingLinks: false,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: '../reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

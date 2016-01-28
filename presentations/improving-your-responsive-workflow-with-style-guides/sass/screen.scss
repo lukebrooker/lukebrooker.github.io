@@ -1,0 +1,42 @@
+@import "compass";
+
+@function grid-calc($column-number, $columns) {
+  @return percentage(($column-number / $columns));
+}
+
+@mixin breakpoint($breakpoint) {
+  $length: length($breakpoint);
+  @if $length == 1 {
+    @media (min-width : $breakpoint) {
+      @content;
+    }
+  }
+  @else if $length == 2 {
+    @media (min-width: nth($breakpoint,1)) and (max-width: nth($breakpoint,2)) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Breakpoint only accepts 1 or 2 variables";
+  }
+}
+
+$medium: 30em;
+$large: 42em;
+$columns: 6;
+
+
+@for $i from 1 through $columns {
+  .l-col-#{$i} {
+    width: grid-calc($i, $columns);
+  }
+}
+
+@include breakpoint($medium) {
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .l-col-large-#{$i} {
+      width: grid-calc($i, $columns);
+    }
+  }
+}
