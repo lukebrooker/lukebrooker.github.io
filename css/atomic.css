@@ -43,11 +43,11 @@
 .Cur\(d\)\! {
   cursor: default !important;
 }
-.D\(ib\) {
-  display: inline-block;
-}
 .D\(f\) {
   display: flex;
+}
+.D\(ib\) {
+  display: inline-block;
 }
 .D\(if\) {
   display: inline-flex;
@@ -106,14 +106,14 @@
 .Fz\(ms0\) {
   font-size: 1rem;
 }
-.H\(ms2\) {
-  height: 1.44rem;
-}
 .H\(0\) {
   height: 0;
 }
 .H\(1\/2\) {
   height: 50%;
+}
+.H\(ms2\) {
+  height: 1.44rem;
 }
 .H\(r1\) {
   height: 1.5rem;
@@ -344,14 +344,14 @@
 .Whs\(nw\) {
   white-space: nowrap;
 }
-.W\(ms2\) {
-  width: 1.44rem;
-}
 .W\(100\%\) {
   width: 100%;
 }
 .W\(1\/2\) {
   width: 50%;
+}
+.W\(ms2\) {
+  width: 1.44rem;
 }
 .W\(r1\) {
   width: 1.5rem;

@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
+import { RouteHandler } from 'react-router'
 import Content from '../../components/Content'
 
 export default class extends Component {
   render () {
-    window.location.replace(window.location.href.replace('/articles/', '/writing/'))
     return (
       <Content>
-        <div>Redirecting…</div>
+        <RouteHandler {...this.props}/>
       </Content>
     )
   }

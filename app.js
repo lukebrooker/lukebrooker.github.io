@@ -1,6 +1,8 @@
 exports.loadContext = function (callback) {
-  var context
-  context = require.context('./pages', true)
+  var context = require.context('./pages', true)
+  if (window && (window.location.href.indexOf('/articles/') !== -1)) {
+    window.location.replace(window.location.href.replace('/articles/', '/writing/'))
+  }
   if (typeof document !== 'undefined') {
     var WebFont = require('webfontloader')
     WebFont.load({
