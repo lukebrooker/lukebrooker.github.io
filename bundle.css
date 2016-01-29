@@ -434,10 +434,10 @@ dd {
 .Miw\(300px\) {
   min-width: 300px;
 }
-.Op\(\.6\)\:h:hover {
+.Op\(\.6\) {
   opacity: .6;
 }
-.Op\(\.6\) {
+.Op\(\.6\)\:h:hover {
   opacity: .6;
 }
 .Op\(\.2\) {
