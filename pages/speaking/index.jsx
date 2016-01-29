@@ -18,7 +18,6 @@ export default class Speaking extends Component {
       <DocumentTitle title={config.htmlTitle}>
         <div>
           {sortedPages.map((page, key) => {
-            console.log(page.path)
             return (page.data && (page.path.indexOf('/speaking/') !== -1))
               ? (<div key={key} className='D(f) W(100%) P(rh) Mb(r1)'>
                   <div className='D(f) Fld(c) W(1/2)--sm Mend(rh)'>
