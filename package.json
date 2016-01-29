@@ -7,6 +7,7 @@
     "build": "gatsby build",
     "publish": "npm run build && npm run push",
     "push": "node publish.js",
+    "start": "gatsby develop",
     "svg": "svg-sprite -sD components/Icons --symbol-dest '' --ss icons.svg --si components/Icons/svgs/*.svg",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

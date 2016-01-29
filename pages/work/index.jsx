@@ -15,7 +15,7 @@ export default class Work extends Component {
       return (ref = page.data) != null ? ref.date : void 0
     }).reverse()
     return (
-      <DocumentTitle title={config.htmlTitle}>
+      <DocumentTitle title={'Work | ' + config.htmlTitle}>
         <div className='D(f) Flw(w) M(nrh)'>
           {sortedPages.map((page, key) => {
             return (page.data && (page.path.indexOf('/work/') !== -1))

@@ -10,7 +10,7 @@ export default class Writing extends Component {
       config
     } = this.props
     return (
-      <DocumentTitle title={config.htmlTitle}>
+      <DocumentTitle title={'Writing | ' + config.htmlTitle}>
         <div>
           {pages.map((page, key) => {
             return (page.data && (page.path.indexOf('/writing/') !== -1))
