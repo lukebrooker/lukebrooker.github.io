@@ -7,10 +7,10 @@ const Logo = ({
   return (
     <div className={classes}>
       <div className='StretchedBox D(f) Flw(w) Trs(eo) Rotate(45deg)'>
-        <div className='Bgc(cc) W(1/2) H(100%) Pend(5%) Bgcp(cb) Trs(eob) Op(.9) Op(1):h Scale(1.1):h'></div>
-        <div className='D(f) Fld(c) W(1/2) H(100%) Pstart(5%)'>
-          <div className='Bgc(cc) W(100%) H(1/2) Pb(11.1%) Bgcp(cb) Trs(eob) Op(.6) Op(1):h Scale(1.1):h'></div>
-          <div className='Bgc(cc) W(100%) H(1/2) Pt(11.1%) Bgcp(cb) Trs(eob) Op(.3) Op(1):h Scale(1.1):h'></div>
+        <div className='Bgc(cc) W(45%) H(100%) Trs(eob) Op(.9) Op(1):h Scale(1.1):h'></div>
+        <div className='D(f) Fld(c) W(45%) H(100%) Mstart(a)'>
+          <div className='Bgc(cc) W(100%) H(45%) Trs(eob) Op(.6) Op(1):h Scale(1.1):h'></div>
+          <div className='Bgc(cc) W(100%) H(45%) Mt(a) Trs(eob) Op(.3) Op(1):h Scale(1.1):h'></div>
         </div>
       </div>
     </div>
