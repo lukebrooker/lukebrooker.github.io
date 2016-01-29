@@ -13,7 +13,6 @@ export default class Writing extends Component {
       <DocumentTitle title={config.htmlTitle}>
         <div>
           {pages.map((page, key) => {
-            console.log(page)
             return (page.data && (page.path.indexOf('/writing/') !== -1))
               ? (<div key={key} className='Mb(r2)'>
                 <h2 className='Fz(ms2) Fw(600)'><Link className='Link' to={page.path}>{page.data.title}</Link></h2>
