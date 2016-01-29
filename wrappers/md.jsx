@@ -25,7 +25,7 @@ export default class Md extends Component {
             <a href={page.data.link} className='Link'>View the site ></a>
           </p>) : undefined }
           { page.data.slidesLink ? (<div>
-            <div className='W(100%) H(0) Pt(66%) Pos(r) Bgc(cc)'>
+            <div className='W(100%) H(0) Pt(66%) Pos(r) Bgc(cc) Bxsh(sh4)'>
               <iframe src={page.data.slidesLink} className='StretchedBox W(100%) H(100%)' frameBorder='0' />
             </div>
             <p className='My(r1) Ta(c)'>
