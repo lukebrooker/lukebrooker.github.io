@@ -322,11 +322,11 @@ dd {
 .Fz\(msn1\) {
   font-size: 0.833rem;
 }
-.Fz\(ms3\) {
-  font-size: 1.728rem;
-}
 .Fz\(ms1\) {
   font-size: 1.2rem;
+}
+.Fz\(ms3\) {
+  font-size: 1.728rem;
 }
 .Fz\(ms0\) {
   font-size: 1rem;
@@ -419,16 +419,19 @@ dd {
 .Mih\(100\%\) {
   min-height: 100%;
 }
+.Mih\(12rem\) {
+  min-height: 12rem;
+}
 .Miw\(r4\) {
   min-width: 6rem;
 }
 .Miw\(300px\) {
   min-width: 300px;
 }
-.Op\(\.6\)\:h:hover {
+.Op\(\.6\) {
   opacity: .6;
 }
-.Op\(\.6\) {
+.Op\(\.6\)\:h:hover {
   opacity: .6;
 }
 .Op\(\.2\) {
@@ -443,7 +446,7 @@ dd {
 .Op\(1\)\! {
   opacity: 1 !important;
 }
-.Ov\(h\), .Hidden {
+.Ov\(h\), .Hidden, [class*=LineClamp] {
   overflow: hidden;
 }
 .P\(rh\) {
@@ -480,17 +483,20 @@ dd {
 .Pos\(r\) {
   position: relative;
 }
+.Ta\(c\) {
+  text-align: center;
+}
 .Tt\(u\) {
   text-transform: uppercase;
 }
 .Whs\(nw\) {
   white-space: nowrap;
 }
-.W\(100\%\) {
-  width: 100%;
-}
 .W\(35vw\) {
   width: 35vw;
+}
+.W\(100\%\) {
+  width: 100%;
 }
 .Z\(-1\) {
   z-index: -1;
@@ -506,6 +512,29 @@ dd {
   border: 0 !important;
   height: 1px !important;
   width: 1px !important;
+}
+[class*=LineClamp] {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+a[class*=LineClamp] {
+  display: inline-block;
+  display : -webkit-box;
+  *display: inline;
+  zoom: 1;
+}
+a[class*=LineClamp]:after {
+  content: ".";
+  font-size: 0;
+  visibility: hidden;
+  display: inline-block;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+}
+.LineClamp\(1\) {
+  -webkit-line-clamp: 1;
+  max-height: ;
 }
 .StretchedBox {
   position: absolute;
