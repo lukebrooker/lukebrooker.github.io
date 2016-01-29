@@ -139,7 +139,8 @@ module.exports = {
       'Pt(rh)',
       'Pb(r1)',
       'Pb(r1h)',
-      'D(b)'
+      'D(b)',
+      'Mih(12rem)'
     ]
   }
 }

@@ -2,6 +2,7 @@
 title: 'Bekki Brooker Hair'
 date: '2015-01-21T14:01:03.284Z'
 projectDate: '2015'
+link: 'http://bekkibrooker.com'
 tags:
   - ui
   - branding
@@ -9,8 +10,6 @@ teaserImages:
   - 'bekkibrooker-logo.svg'
   - 'bekkibrooker-gallery-mobile.jpg'
   - 'bekkibrooker-home-desktop.jpg'
-bgColor: '#1ba7d9'
-color: '#fff.9'
 ---
 
 ![Bekki Brooker Hair Logo](bekkibrooker-logo.svg)

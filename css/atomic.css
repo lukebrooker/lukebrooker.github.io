@@ -46,7 +46,7 @@
 .D\(f\) {
   display: flex;
 }
-.D\(ib\) {
+.D\(ib\), a[class*=LineClamp] {
   display: inline-block;
 }
 .D\(if\) {
@@ -91,29 +91,20 @@
 .Fw\(800\) {
   font-weight: 800;
 }
-.Fz\(ms2\) {
-  font-size: 1.44rem;
+.Fz\(ms3\) {
+  font-size: 1.728rem;
 }
 .Fz\(msn1\) {
   font-size: 0.833rem;
 }
-.Fz\(ms3\) {
-  font-size: 1.728rem;
-}
 .Fz\(ms1\) {
   font-size: 1.2rem;
 }
+.Fz\(ms2\) {
+  font-size: 1.44rem;
+}
 .Fz\(ms0\) {
   font-size: 1rem;
-}
-.H\(r1\) {
-  height: 1.5rem;
-}
-.H\(100\%\) {
-  height: 100%;
-}
-.H\(45\%\) {
-  height: 45%;
 }
 .H\(0\) {
   height: 0;
@@ -123,6 +114,15 @@
 }
 .H\(ms2\) {
   height: 1.44rem;
+}
+.H\(r1\) {
+  height: 1.5rem;
+}
+.H\(100\%\) {
+  height: 100%;
+}
+.H\(45\%\) {
+  height: 45%;
 }
 .H\(35vw\) {
   height: 35vw;
@@ -195,20 +195,20 @@
 .Mb\(rh\) {
   margin-bottom: 0.75rem;
 }
-.Mah\(r2\) {
-  max-height: 3rem;
-}
 .Mah\(100\%\) {
   max-height: 100%;
+}
+.Mah\(r2\) {
+  max-height: 3rem;
 }
 .Mah\(r6\) {
   max-height: 9rem;
 }
-.Maw\(r2\) {
-  max-width: 3rem;
-}
 .Maw\(100\%\) {
   max-width: 100%;
+}
+.Maw\(r2\) {
+  max-width: 3rem;
 }
 .Maw\(r6\) {
   max-width: 9rem;
@@ -228,6 +228,9 @@
 .Mih\(100\%\) {
   min-height: 100%;
 }
+.Mih\(12rem\) {
+  min-height: 12rem;
+}
 .Miw\(r1\) {
   min-width: 1.5rem;
 }
@@ -237,14 +240,14 @@
 .Miw\(300px\) {
   min-width: 300px;
 }
+.Op\(\.6\) {
+  opacity: .6;
+}
 .Op\(\.9\) {
   opacity: .9;
 }
 .Op\(1\)\:h:hover {
   opacity: 1;
-}
-.Op\(\.6\) {
-  opacity: .6;
 }
 .Op\(\.3\) {
   opacity: .3;
@@ -270,7 +273,7 @@
 .Ov\(v\) {
   overflow: visible;
 }
-.Ov\(h\), .Hidden {
+.Ov\(h\), .Hidden, [class*=LineClamp] {
   overflow: hidden;
 }
 .P\(rh\) {
@@ -305,9 +308,6 @@
 .Pt\(4\%\) {
   padding-top: 4%;
 }
-.Pend\(5\%\) {
-  padding-right: 5%;
-}
 .Pb\(r2\) {
   padding-bottom: 3rem;
 }
@@ -317,14 +317,14 @@
 .Pb\(r1h\) {
   padding-bottom: 2.25rem;
 }
-.Pstart\(5\%\) {
-  padding-left: 5%;
+.Pos\(a\), .StretchedBox {
+  position: absolute;
 }
 .Pos\(r\) {
   position: relative;
 }
-.Pos\(a\), .StretchedBox {
-  position: absolute;
+.Ta\(c\) {
+  text-align: center;
 }
 .Tt\(u\) {
   text-transform: uppercase;
@@ -344,12 +344,6 @@
 .Whs\(nw\) {
   white-space: nowrap;
 }
-.W\(r1\) {
-  width: 1.5rem;
-}
-.W\(45\%\) {
-  width: 45%;
-}
 .W\(100\%\) {
   width: 100%;
 }
@@ -358,6 +352,12 @@
 }
 .W\(ms2\) {
   width: 1.44rem;
+}
+.W\(r1\) {
+  width: 1.5rem;
+}
+.W\(45\%\) {
+  width: 45%;
 }
 .W\(35vw\) {
   width: 35vw;
@@ -379,6 +379,28 @@
   border: 0 !important;
   height: 1px !important;
   width: 1px !important;
+}
+[class*=LineClamp] {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+a[class*=LineClamp] {
+  display : -webkit-box;
+  *display: inline;
+  zoom: 1;
+}
+a[class*=LineClamp]:after {
+  content: ".";
+  font-size: 0;
+  visibility: hidden;
+  display: inline-block;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+}
+.LineClamp\(1\) {
+  -webkit-line-clamp: 1;
+  max-height: ;
 }
 .StretchedBox {
   top: 0;
@@ -428,17 +450,6 @@
     width: 2.25rem;
   }
 }
-@media screen and (min-width: 29.375em) {
-  .Fz\(ms3\)--sm {
-    font-size: 1.728rem;
-  }
-  .Mt\(r2\)--sm {
-    margin-top: 3rem;
-  }
-  .W\(1\/2\)--sm {
-    width: 50%;
-  }
-}
 @media screen and (min-width: 29.375em) and (max-width: 54.938em) {
   .Fz\(ms4\)--osm {
     font-size: 2.074rem;
@@ -458,5 +469,16 @@
   }
   .Fz\(ms2\)--lg {
     font-size: 1.44rem;
+  }
+}
+@media screen and (min-width: 29.375em) {
+  .Fz\(ms3\)--sm {
+    font-size: 1.728rem;
+  }
+  .Mt\(r2\)--sm {
+    margin-top: 3rem;
+  }
+  .W\(1\/2\)--sm {
+    width: 50%;
   }
 }

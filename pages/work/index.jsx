@@ -21,7 +21,7 @@ export default class Work extends Component {
             return (page.data && (page.path.indexOf('/work/') !== -1))
               ? (<Link key={key} to={page.path} className='D(f) Fld(c) W(100%) P(rh) Mb(r1) W(1/2)--sm'>
                   <div className='D(f) Mb(rh)'>
-                    <div className='Mend(a) Op(.6):h'>{page.data.title}</div>
+                    <div className='Mend(a) Op(.6):h LineClamp(1)'>{page.data.title}</div>
                     <div className='Op(.6)'>{page.data.projectDate}</div>
                   </div>
                   <div>

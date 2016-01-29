@@ -52,14 +52,14 @@ renderer.image = function (href, title, text) {
   var img = `<img src='${href}' alt='${text}'`
   if (title === 'mobile') {
     img = `<div class='Maw(15rem) Bdrs(r1) Bxsh(sh4) Bgc(#fff) Px(rh) Pt(rh) Pb(r1h) Mx(a) My(r1h)'>
-      <div class='Bxsh(ish1)'>${img} class='D(b)' /></div></div>`
+      <div class='Bxsh(ish1)'>${img} class='D(b) Mih(12rem)' /></div></div>`
   } else if (title === 'desktop') {
     img = `<div class='Ov(h) Lh(1) Bdrs(re) Bxsh(sh4) Mx(a) My(r1h)'>
-      <div class='H(0) Pt(4%) Bgc(#fff) Bxsh(sh1) Z(1)'></div>${img} class='D(b) Pos(r) Z(-1)' /></div>`
+      <div class='H(0) Pt(4%) Bgc(#fff) Bxsh(sh1) Z(1)'></div>${img} class='D(b) Pos(r) Z(-1) Mih(12rem)' /></div>`
   } else if (title) {
-    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4)' title='${title}'/></div>`
+    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4) Mih(12rem)' title='${title}'/></div>`
   } else {
-    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4)'/></div>`
+    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4) Mih(12rem)'/></div>`
   }
   return img
 }

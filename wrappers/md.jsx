@@ -21,6 +21,15 @@ export default class Md extends Component {
           <p className='Fz(ms1) Mb(r1) Op(.6)'>{post.teaser}</p>
           <hr/>
           <div dangerouslySetInnerHTML={{__html: post.body}}/>
+          { page.data.link ? (<p className='My(r1) Ta(c)'>
+            <a href={page.data.link} className='Link'>View the site ></a>
+          </p>) : undefined }
+          { page.data.slidesLink ? (<div>
+            <iframe src={page.data.slidesLink} frameBorder='0' />
+            <p className='My(r1) Ta(c)'>
+              <a href={page.data.slidesLink} className='Link'>View full screen ></a>
+            </p>
+          </div>) : undefined }
         </div>
       </DocumentTitle>
     )
