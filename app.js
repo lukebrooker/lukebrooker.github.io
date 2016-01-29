@@ -1,6 +1,6 @@
 exports.loadContext = function (callback) {
   var context = require.context('./pages', true)
-  if (window && (window.location.href.indexOf('/articles/') !== -1)) {
+  if ((typeof document !== 'undefined') && (window.location.href.indexOf('/articles/') !== -1)) {
     window.location.replace(window.location.href.replace('/articles/', '/writing/'))
   }
   if (typeof document !== 'undefined') {
