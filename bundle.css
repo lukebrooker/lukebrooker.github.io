@@ -377,7 +377,7 @@ dd {
   margin-left: 0;
   margin-right: 0;
 }
-.My\(r1\) {
+.My\(r1\), .Mt\(r1\) {
   margin-top: 1.5rem;
 }
 .My\(r1\), .Mb\(r1\) {
@@ -546,26 +546,6 @@ a[class*=LineClamp]:after {
   bottom: 0;
   left: 0;
 }
-@media screen and (orientation:landscape) {
-  .D\(f\)--land {
-    display: flex;
-  }
-  .Flxg\(0\)--land {
-    flex-grow: 0;
-  }
-  .Fld\(r\)--land {
-    flex-direction: row;
-  }
-  .Ai\(c\)--land {
-    align-items: center;
-  }
-  .Jc\(c\)--land {
-    justify-content: center;
-  }
-  .Mstart\(r4\)--land {
-    margin-left: 6rem;
-  }
-}
 @media screen and (min-width: 29.375em) {
   .D\(f\)--sm {
     display: flex;
@@ -589,6 +569,26 @@ a[class*=LineClamp]:after {
   }
   .W\(1\/2\)--sm {
     width: 50%;
+  }
+}
+@media screen and (orientation:landscape) {
+  .D\(f\)--land {
+    display: flex;
+  }
+  .Flxg\(0\)--land {
+    flex-grow: 0;
+  }
+  .Fld\(r\)--land {
+    flex-direction: row;
+  }
+  .Ai\(c\)--land {
+    align-items: center;
+  }
+  .Jc\(c\)--land {
+    justify-content: center;
+  }
+  .Mstart\(r4\)--land {
+    margin-left: 6rem;
   }
 }
 @media screen and (min-width: 55em) {
