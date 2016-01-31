@@ -21,7 +21,8 @@ export default class Md extends Component {
     } = this.props
     const post = page.data
     const workPost = !!post.projectDate
-    const speakingPost = !!post.slidesLink
+    const speakingPost = !!post.slidesLink || !!post.embedLink
+    const iframeSrc = post.embedLink || post.slidesLink
     const date = workPost ? post.projectDate : post.date
     const sectionTitle = this.getSectionTitle(workPost, speakingPost)
     return (
@@ -36,8 +37,12 @@ export default class Md extends Component {
             <a href={post.link} className='Link'>View the site ></a>
           </p>) : undefined }
           { speakingPost ? (<div>
-            <div className='W(100%) H(0) Pt(66%) Pos(r) Bgc(cc) Bxsh(sh4)'>
-              <iframe src={post.slidesLink} className='StretchedBox W(100%) H(100%)' frameBorder='0' />
+            <div className='W(100%) H(0) Pt(82.7323%) Pos(r) Brrs(rq) Bxsh(sh4)'>
+              {(<iframe
+                src={iframeSrc}
+                className='StretchedBox W(100%) H(100%)'
+                frameBorder='0' />
+              )}
             </div>
             <p className='My(r1) Ta(c)'>
               <a href={post.slidesLink} className='Link'>View full screen ></a>

@@ -44,6 +44,7 @@ export default class Speaking extends Component {
               </div>)
             }
           )}
+          <div className='Ta(c) Op(.6)'>More being added soon.</div>
         </div>
       </DocumentTitle>
     )
