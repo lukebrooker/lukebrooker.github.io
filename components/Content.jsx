@@ -6,7 +6,7 @@ const Logo = ({
   children
 }) => {
   const classes = cx(
-    'Px(r1) Px(r2)--md Pt(r1) Pb(r2)',
+    'Px(r1) Px(r2)--md Pt(r1) Mb(r3)',
     className
   )
   return (
