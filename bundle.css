@@ -546,26 +546,6 @@ a[class*=LineClamp]:after {
   bottom: 0;
   left: 0;
 }
-@media screen and (min-width: 29.375em) {
-  .D\(f\)--sm {
-    display: flex;
-  }
-  .Fz\(ms3\)--sm {
-    font-size: 1.728rem;
-  }
-  .Mt\(r2\)--sm {
-    margin-top: 3rem;
-  }
-  .Mend\(rh\)--sm {
-    margin-right: 0.75rem;
-  }
-  .Mstart\(rh\)--sm {
-    margin-left: 0.75rem;
-  }
-  .W\(1\/2\)--sm {
-    width: 50%;
-  }
-}
 @media screen and (orientation:landscape) {
   .D\(f\)--land {
     display: flex;
@@ -586,12 +566,48 @@ a[class*=LineClamp]:after {
     margin-left: 6rem;
   }
 }
+@media screen and (min-width: 29.375em) {
+  .D\(f\)--sm {
+    display: flex;
+  }
+  .Fld\(rr\)--sm {
+    flex-direction: row-reverse;
+  }
+  .Fz\(ms3\)--sm {
+    font-size: 1.728rem;
+  }
+  .Mx\(nrq\)--sm {
+    margin-left: -0.375rem;
+    margin-right: -0.375rem;
+  }
+  .Mt\(r2\)--sm {
+    margin-top: 3rem;
+  }
+  .Px\(rq\)--sm {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+  .W\(1\/2\)--sm {
+    width: 50%;
+  }
+}
 @media screen and (min-width: 55em) {
   .D\(i\)--md {
     display: inline;
   }
+  .Mx\(nrh\)--md {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+  .Mb\(r2\)--md {
+    margin-bottom: 3rem;
+  }
   .P\(r2\)--md {
     padding: 3rem;
+  }
+  .Px\(rh\)--md {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   .Py\(r1h\)--md {
     padding-top: 2.25rem;
