@@ -57,9 +57,9 @@ renderer.image = function (href, title, text) {
     img = `<div class='Ov(h) Lh(1) Bdrs(re) Bxsh(sh4) Mx(a) My(r1h)'>
       <div class='H(0) Pt(4%) Bgc(#fff) Bxsh(sh1) Z(1)'></div>${img} class='D(b) Pos(r) Z(-1) Mih(12rem)' /></div>`
   } else if (title) {
-    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4) Mih(12rem)' title='${title}'/></div>`
+    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4)' title='${title}'/></div>`
   } else {
-    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4) Mih(12rem)'/></div>`
+    img = `<div class='My(r1h)'>${img} class='Mx(a) D(b) Bxsh(sh4)'/></div>`
   }
   return img
 }
