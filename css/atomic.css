@@ -91,8 +91,8 @@
 .Fw\(800\) {
   font-weight: 800;
 }
-.Fz\(ms3\) {
-  font-size: 1.728rem;
+.Fz\(ms2\) {
+  font-size: 1.44rem;
 }
 .Fz\(msn1\) {
   font-size: 0.833rem;
@@ -100,17 +100,14 @@
 .Fz\(ms1\) {
   font-size: 1.2rem;
 }
-.Fz\(ms2\) {
-  font-size: 1.44rem;
+.Fz\(ms3\) {
+  font-size: 1.728rem;
 }
 .Fz\(ms0\) {
   font-size: 1rem;
 }
 .H\(0\) {
   height: 0;
-}
-.H\(100\%\) {
-  height: 100%;
 }
 .H\(1\/2\) {
   height: 50%;
@@ -120,6 +117,9 @@
 }
 .H\(r1\) {
   height: 1.5rem;
+}
+.H\(100\%\) {
+  height: 100%;
 }
 .H\(45\%\) {
   height: 45%;
@@ -142,11 +142,11 @@
 .Lh\(1\.5\) {
   line-height: 1.5;
 }
-.M\(nrh\) {
-  margin: -0.75rem;
-}
 .M\(rh\) {
   margin: 0.75rem;
+}
+.M\(nrh\) {
+  margin: -0.75rem;
 }
 .M\(0\) {
   margin: 0;
@@ -240,17 +240,14 @@
 .Miw\(300px\) {
   min-width: 300px;
 }
-.Op\(\.6\) {
-  opacity: .6;
-}
-.Op\(\.6\)\:h:hover {
-  opacity: .6;
-}
 .Op\(\.9\) {
   opacity: .9;
 }
 .Op\(1\)\:h:hover {
   opacity: 1;
+}
+.Op\(\.6\) {
+  opacity: .6;
 }
 .Op\(\.3\) {
   opacity: .3;
@@ -260,6 +257,9 @@
 }
 .Op\(\.9\)\:h:hover {
   opacity: .9;
+}
+.Op\(\.6\)\:h:hover {
+  opacity: .6;
 }
 .Op\(\.2\) {
   opacity: .2;
@@ -299,14 +299,14 @@
 .Py\(rh\) {
   padding-bottom: 0.75rem;
 }
-.Pt\(66\%\) {
-  padding-top: 66%;
-}
 .Pt\(100\%\) {
   padding-top: 100%;
 }
 .Pt\(r1\) {
   padding-top: 1.5rem;
+}
+.Pt\(66\%\) {
+  padding-top: 66%;
 }
 .Pt\(4\%\) {
   padding-top: 4%;
@@ -320,11 +320,11 @@
 .Pb\(r1h\) {
   padding-bottom: 2.25rem;
 }
-.Pos\(r\) {
-  position: relative;
-}
 .Pos\(a\), .StretchedBox {
   position: absolute;
+}
+.Pos\(r\) {
+  position: relative;
 }
 .Ta\(c\) {
   text-align: center;
