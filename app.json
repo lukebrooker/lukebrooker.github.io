@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Luke Brooker",
+    "slug": "lukebrooker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./public/images/icon.png",
+    "scheme": "lukebrooker",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./public/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./public/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./public/images/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-router",
+        {
+          "origin": "https://lukebrooker.com"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    }
+  }
+}

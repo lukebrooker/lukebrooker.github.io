@@ -1,0 +1,61 @@
+Last night I spoke at the excellent "[What Do You Know](http://www.webdirections.org/events/wdyk-brisbane-mar2014/)" event, run by [Web Directions](http://www.webdirections.org). Since [my slides](/presentations/craft-as-in-beer) are not exactly self explanatory, I thought I would post this alongside them to help those who missed the event.
+
+---
+
+I love a good beer. But not just any beer. When you taste one of these exceptional brews, you don't skull it, you savour it. For me this is usually in the form of **craft** beer.
+
+According to the American Brewers Association craft beer is practically defined by:
+
+- Small
+- Independent
+- Traditional
+
+I would argue that great craft breweries are actually defined by:
+
+- Experience
+- Quality
+- Passion
+
+This second definition is harder to use in practice, but it's one that lends itself to the reason I love craft beer.
+
+The other reason I like the second definition, is that it not only defines craft beer, but any craftsperson. So, when thinking of the role craftspersonship and the web, I naturally thought of sushi.
+
+OK, maybe that's not natural. But to be specific I was thinking of Jiro Ono, arguably the worlds best sushi chef. As documented in the movie “Jiro Dreams of Sushi”, Jiro has been honing his craft for over 75 years. He cares about every single step in the life of one of his dishes, all the way back to the inception of his ingredients. It’s this care that allows him to create one of the most exceptional dining experiences available.
+
+Bringing it back to the web, and how we design and develop for multiple devices, it constantly strikes me that many don’t take this care in their work.
+
+So what can we learn from Jiro? The main thing that struck me about Jiro was his relentless pursuit of perfection. In this pursuit I learnt 3 things that help in design and development on the web.
+
+## Master the Simple Things
+
+One of the first things you notice about the sushi Jiro creates, is that it is simple, not simplistic, but simple. Each plate of sushi looks simple, but the attention to detail that goes into that simple plate is astonishing. From ageing tuna for 3-10 days depending on its age, to massaging octopus for 50 minutes. To a customer, this may look look like a simple piece of tuna or octopus, but after tasting it, the quality, experience and passion put into it is evident.
+
+It is this mastery of the simple things that we can bring to design and development. For instance do you know what attributes you should be using in your viewport meta tag? Do you know how to keep the aspect ratio of your video when it's container adapts responsively? These simple solutions can fix large usability problems I have seen again and again. Too often I see developers skipping over this small, simple stuff and coming up with complex solutions to responsive design that effectively breaks on a large percentage of devices.
+
+I don't know about you, but because of the rate of change on the web and the team members I need to collaborate with, trying to keep this knowledge all in my head is not going to work as well for me as it does for Jiro. One way I deal with this is to keep as much of my process documented as possible. I have my own [CSS guidelines](https://github.com/lukebrooker/CSS-Guidelines), [project boilerplate](https://github.com/lukebrooker/spark) and I keep a library of UX research and best practices that I keep updating and referencing.
+
+By doing this, I keep a strong foundation. When new techniques are discovered or bought to my attention I can adapt my thinking, add it to my guidelines and still have a strong foundation to base future decisions on.
+
+## Understand your Dependencies
+
+As much as a perfectionist as Jiro is, he can't control everything in his dishes. If he was out growing and catching his ingredients he wouldn't have time to prepare the dishes he is so famous for. But he doesn't just go to the local supermarket and grab some cans of tuna. He has formed relationships with vendors at the local markets and understands every detail about the ingredients he is using.
+
+Sometimes as web developers, we don't have the luxury to create everything from scratch or it just doesn't make sense for us to build a complex JavaScript library that someone else has already spent years of development and testing creating. But this doesn't mean we should blindly add these things to our projects.
+
+If we want to ensure the quality and maintainability of our work, we need to understand each dependency we include. How deep this knowledge goes, depends on the potential impact of the dependency. A small, flexible library that can easily be replaced, may not need to be investigated too deeply, but a large framework that will become the foundation for your whole UI, is something you should take very seriously.
+
+The biggest offender to this of late is Bootstrap. Not that Bootstrap itself doing something specifically wrong for what it is trying to achieve, but that developers **blindly** include it as a foundation for major projects is astonishing to me. Using Bootstrap usually end up with you adding it somewhere in your project and then override it until you get what you want and end up with convoluted CSS file that nobody is sure what is going so every new property gets added to the bottom with extra specificity and the eventual !IMPORTANT (typed as loudly as possible).
+
+Besides not being maintainable, the design and development solutions included in a framework like this aren't always the best for your particular problem… but you treat it like a nail and use one of the 20 or so hammers your were given.
+
+Don't get me wrong, I love that these frameworks are out there. As soon as a new version is out I will scour the code to see what they are doing differently. If I like something I see, I can add it back to my boilerplate or adapt my guidelines. If you want to use a framework like this, go ahead. But for me it seem like giving this control to a framework is like a brewery making beer from a home brew kit.
+
+## Extend Simple with Creative Thinking
+
+Jiro isn't making the same sushi now as he was 50 years ago. Even though he learned from great sushi chefs that said there was nothing left they could learn, he didn't believe it and he kept pushing to improve. He does things that weren't or sometimes still aren't the norm in the sushi industry. One example that struck me, was he even adjusted the size of each dish he gave to individual customers to ensure they would all finish at the same time.
+
+Once we have our standards on the web, we sometimes take them as fact and don't attempt to question or better them over time. [Why do we use text-decoration: underline](https://medium.com/designing-medium/7c03a9274f9)? [Why are our designs 960px wide](http://alistapart.com/article/responsive-web-design/)? If we didn't question best practices from time to time, we wouldn't progress the web.
+
+A recent example is, Mikkel Bo Schmidt's [re-design of the select element](https://medium.com/design-ux/bc190d62eff5). Rather than accept a default select element was good enough for a device agnostic site (anyone that uses iOS will know that it isn't), Mikkel's company opted to design something specific and more user friendly to their specific problem.
+
+Now, I am not saying we should spend a month on each individual detail of our designs, but each time we can invest a little extra time and passion into an important part of our craft, that is experience and quality that we now have for our next project. Doing a little of this at every chance we get, is what helps us become craftspeople.
