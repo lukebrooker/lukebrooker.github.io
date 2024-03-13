@@ -10,7 +10,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "predeploy:web": "expo export --platform web"
+    "predeploy": "expo export -p web",
+    "deploy": "gh-pages -t -d dist"
   },
   "jest": {
     "preset": "jest-expo"
@@ -46,8 +47,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
+    "@types/gh-pages": "^6",
     "@types/react": "~18.2.14",
-    "babel-plugin-module-resolver": "^5.0.0"
+    "babel-plugin-module-resolver": "^5.0.0",
+    "gh-pages": "^6.1.1"
   },
   "private": true,
   "packageManager": "yarn@4.0.2"
