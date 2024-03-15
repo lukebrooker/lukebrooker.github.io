@@ -9,5 +9,6 @@ export function ensureSlash (inputPath: string, needsSlash: boolean): string {
   }
 }
 
-export const getCurrentPath = (pathname: string) =>
-  ensureSlash(pathname || '', true) || 'home'
+export const getCurrentPath = (pathname: string, needsSlash: boolean = true) =>
+  ensureSlash(pathname || '', needsSlash) || 'home'
+

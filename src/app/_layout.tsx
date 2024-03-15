@@ -38,8 +38,8 @@ export default function RootLayout () {
 
   const colorScheme = 'light'
   const pathname = usePathname()
+  const currentPath = getCurrentPath(pathname, false)
 
-  const currentPath = getCurrentPath(pathname)
   const {
     image = {},
     title = site.title,
