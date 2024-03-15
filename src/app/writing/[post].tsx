@@ -1,11 +1,11 @@
 import { useLocalSearchParams, usePathname } from 'expo-router'
 import Head from 'expo-router/head'
 import React from 'react'
-import { PageContainer } from '@/components/PageContainer'
 import { MarkdownTheme } from '@/components/MarkdownTheme'
 import { PageHeader } from '@/components/PageHeader'
 import { MainContainer } from '@/components/MainContainer'
 import { FormattedDate } from '@/components/FormattedDate'
+import { meta, site } from '@/Data'
 
 export async function generateStaticParams (): Promise<{ post: string }[]> {
   return mdxctx
@@ -57,7 +57,7 @@ function BlogHead ({ info }: { info: PostInfo }) {
   const url = `https://lukebrooker.com${pathname}`
   return (
     <Head>
-      <title>{info.title}</title>
+      <title>{info.title} · {meta.writing.title} · {site.title}</title>
       <meta name='description' content={info.description} />
       {/* TODO: Dynamic */}
       {/* <meta name="keywords" content={info.tags.join(',')} /> */}

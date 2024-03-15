@@ -5,6 +5,7 @@ import { MarkdownTheme } from '@/components/MarkdownTheme'
 import { PageHeader } from '@/components/PageHeader'
 import { MainContainer } from '@/components/MainContainer'
 import { FormattedDate } from '@/components/FormattedDate'
+import { meta, site } from '@/Data'
 
 export async function generateStaticParams (): Promise<{ post: string }[]> {
   return mdxctx
@@ -58,7 +59,7 @@ function BlogHead ({ info }: { info: PostInfo }) {
   const url = `https://lukebrooker.com${pathname}`
   return (
     <Head>
-      <title>{info.title}</title>
+      <title>{info.title} · {meta.work.title} · {site.title}</title>
       <meta name='description' content={info.description} />
       {/* TODO: Dynamic */}
       {/* <meta name="keywords" content={info.tags.join(',')} /> */}

@@ -129,7 +129,7 @@ export default function RootLayout () {
             <meta key={`meta-${index}`} {...value} />
           ))}
         </Head>
-        {currentPath !== '/' ? (
+        {currentPath !== 'home' ? (
           <ScrollView
             contentInset={{ top: 0, bottom: paddingBottom }}
             ref={layoutScrollRef}

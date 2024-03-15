@@ -8,6 +8,7 @@ import { FormattedDate } from '@/components/FormattedDate'
 import { Paragraph } from '@/components/Paragraph'
 import { Link } from '@/components/Link'
 import { YStack } from 'tamagui'
+import { meta, site } from '@/Data'
 
 export async function generateStaticParams (): Promise<{ post: string }[]> {
   return mdxctx
@@ -61,7 +62,7 @@ function BlogHead ({ info }: { info: PostInfo }) {
   const url = `https://lukebrooker.com${pathname}`
   return (
     <Head>
-      <title>{info.title}</title>
+      <title>{info.title} · {meta.speaking.title} · {site.title}</title>
       <meta name='description' content={info.description} />
       {/* TODO: Dynamic */}
       {/* <meta name="keywords" content={info.tags.join(',')} /> */}
