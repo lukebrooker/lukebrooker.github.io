@@ -19,6 +19,7 @@ export const Image = ({ src, alt }: ImageProps) => {
       alt={alt}
       loading='lazy'
       style={{
+        borderRadius: 'var(--radius-2)',
         alignSelf: 'center',
         width: '100%',
         maxWidth: source.width,
