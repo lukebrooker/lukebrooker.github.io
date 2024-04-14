@@ -4,9 +4,10 @@ type ImageProps = {
   src: number | string
   alt?: string
   inline?: boolean
+  contained?: boolean
 }
 
-export const Image = ({ src, alt, inline }: ImageProps) => {
+export const Image = ({ src, alt, inline, contained }: ImageProps) => {
   const sourceRef = typeof src === 'string' ? { uri: src } : src
   const source = resolveAssetUri(sourceRef)
 
@@ -21,7 +22,8 @@ export const Image = ({ src, alt, inline }: ImageProps) => {
         playsInline
         className={inline ? 'inline-media' : ''}
         style={{
-          borderRadius: 'var(--radius-2)',
+          borderRadius: 'var(--radius-3)',
+          border: contained ? '1px solid var(--thin)' : 'none',
           maxWidth: '100%',
           width: inline ? '120%' : '100%',
         }}
@@ -36,7 +38,8 @@ export const Image = ({ src, alt, inline }: ImageProps) => {
       loading='lazy'
       className={inline ? 'inline-media' : ''}
       style={{
-        borderRadius: 'var(--radius-2)',
+        borderRadius: 'var(--radius-3)',
+        border: contained ? '1px solid var(--thin)' : 'none',
         alignSelf: 'center',
         width: inline ? '120%' : '100%',
         maxWidth: source.width,

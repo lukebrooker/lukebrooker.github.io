@@ -100,7 +100,7 @@ export default function Work () {
                 </H2>
               </YStack>
               <Link key={post.href} href={post.href as Href<any>}>
-                <Image src={post.image} alt={`${post.title} image`} />
+                <Image src={post.image} alt={`${post.title} image`} contained />
               </Link>
               <Paragraph>{post.description}</Paragraph>
             </YStack>

@@ -34,7 +34,7 @@ export const PageHeader = ({
     >
       <Breadcrumb links={breadcrumbLinks} />
       {headerTop}
-      {image && <Image src={image} alt={title} inline />}
+      {image && <Image src={image} alt={title} inline contained />}
       <H1 textAlign='center' typescale={titleScale} $sm={{ typescale: '$9' }}>
         {title}
       </H1>
