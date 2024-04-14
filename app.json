@@ -4,11 +4,11 @@
     "slug": "lukebrooker",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./public/images/icon.png",
+    "icon": "./images/icon.png",
     "scheme": "lukebrooker",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./public/images/splash.png",
+      "image": "./images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,14 +20,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./public/images/adaptive-icon.png",
+        "foregroundImage": "./images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./public/images/favicon.png"
+      "favicon": "./images/favicon.png"
     },
     "plugins": [
       "expo-font",
