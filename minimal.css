@@ -532,10 +532,21 @@ hr + [role='heading'] {
   box-shadow: inset 0 -0.4em 0 var(--color-29);
 }
 
-.link:hover {
+.link-ghost {
+  box-shadow: inset 0 -0.4em 0 rgba(0, 0, 0, 0);
+}
+
+.link:hover, .link:focus, .link:active, .link-ghost:hover, .link-ghost:focus, .link-ghost:active{
   box-shadow: inset 0 -1.3em 0 var(--color-29);
 }
 
 .link:has(> img) {
   box-shadow: none !important;
+}
+
+@media screen and (min-width: 1264px) {
+  .inline-media {
+    max-width: 1200px !important;
+    margin: 0 -10%;
+  }
 }

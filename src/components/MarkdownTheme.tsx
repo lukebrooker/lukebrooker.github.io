@@ -56,7 +56,7 @@ export function MarkdownTheme ({ children }: { children: React.ReactNode }) {
         />
       )}
       a={Link}
-      img={Image}
+      img={(props) => <Image inline {...props} />}
       ul={({ children }) => <UnorderedList children={children} />}
       ol={({ children }) => <OrderedList children={children} />}
       li={({ children }) => <ListItem children={children} />}

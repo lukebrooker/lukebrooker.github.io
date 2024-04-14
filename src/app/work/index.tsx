@@ -7,15 +7,16 @@ import React from 'react'
 import { Image } from '@/components/Image'
 import { PageHeader } from '@/components/PageHeader'
 import { MainContainer } from '@/components/MainContainer'
-import { FormattedDate } from '@/components/FormattedDate'
 import { Link } from '@/components/Link'
+import { Strong } from '@/components/Strong'
 
 type PostType = {
   title: string
   description: string
   date: string
   slug: string
-  teaserImage: string
+  tags: string[]
+  image: string
 }
 
 type DataType = {
@@ -23,11 +24,12 @@ type DataType = {
   description: string
   date: string
   href: string
-  teaserImage: string
+  tags: string[]
+  image: string
 }
 
 // @ts-ignore Type added in build step
-const mdxctx = require.context('../../../work', true, /\.(mdx|js)$/)
+const mdxctx = require.context('../../../content/work', true, /\.(mdx|js)$/)
 
 const { work } = meta
 
@@ -37,11 +39,12 @@ const posts = mdxctx
   .map((key: any) => mdxctx(key))
 
 const POSTS = posts
-  .map(({ title, date, slug, description, teaserImage }: PostType) => ({
+  .map(({ title, date, slug, description, tags, image }: PostType) => ({
     title,
     description,
     date,
-    teaserImage: `/work/${slug}/${teaserImage}`,
+    tags,
+    image,
     href: `/work/${slug}`
   }))
   .sort((a: { date: any }, b: { date: string }) => b.date.localeCompare(a.date))
@@ -50,56 +53,63 @@ export default function Work () {
   return (
     <>
       <PageHeader title={work.title} description={work.description} />
-      <MainContainer gap='$8' maxWidth={1200}>
+      <MainContainer gap='$8' maxWidth={1000}>
         <Paragraph>
-          If you're viewing this, you're seeing it while I'm currently working
-          on adding new pages.
+          <Strong>Over my 15+ years</Strong> of product design experience, I’ve
+          worked on countless projects, collaborating with many talented people.
+          Over that time I’ve grown in many different areas. I’ve chosen a few
+          projects that highlight some of my key strengths. Especially those
+          that have evolved more recently.
         </Paragraph>
         <Paragraph>
-          <Link href='mailto:mail@lukebrooker.com'>Get in contact</Link> if you
-          would like to see some work from me privately in the meantime.
+          I’m happy to answer any questions or go deeper on any of these
+          projects. Contact me at{' '}
+          <Link href='mailto:mail@lukebrooker.com'>mail@lukebrooker.com</Link>.
         </Paragraph>
         {POSTS.map((post: DataType) => {
           return (
-            <Stack
+            <YStack
               gap='$2'
+              padding='$2'
               key={post.href}
-              borderTopColor='$thin'
-              borderTopWidth={1}
+              borderColor='$thin'
+              borderWidth={1}
               paddingTop='$8'
+              borderRadius='$3'
               $gtMd={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                gap: '$4'
+                gap: '$4',
+                padding: '$4'
               }}
             >
-              <YStack
-                $gtMd={{
-                  width: '40%'
-                }}
-              >
-                <Link key={post.href} href={post.href as Href<any>}>
-                  <Image src={post.teaserImage} alt={`${post.title} image`} />
-                </Link>
-              </YStack>
-              <YStack
-                flexShrink={1}
-                gap='$2'
-                $gtMd={{
-                  width: '60%'
-                }}
-              >
-                <FormattedDate date={post.date} />
-                <H2 fontFamily='$heading' typescale='$7'>
-                  <Link key={post.href} href={post.href as Href<any>}>
+              <YStack flexShrink={1} gap='$2'>
+                <Paragraph typescale='$3' color='$subtle'>
+                  {post.tags.map((tag, i) => (
+                    <span key={tag}>
+                      <span>{tag}</span>
+                      <span>{i < post.tags.length - 1 ? ' · ' : ''}</span>
+                    </span>
+                  ))}
+                </Paragraph>
+                <H2 typescale='$6'>
+                  <Link
+                    key={post.href}
+                    href={post.href as Href<any>}
+                    type='ghost'
+                  >
                     {post.title}
                   </Link>
                 </H2>
-                <Paragraph>{post.description}</Paragraph>
               </YStack>
-            </Stack>
+              <Link key={post.href} href={post.href as Href<any>}>
+                <Image src={post.image} alt={`${post.title} image`} />
+              </Link>
+              <Paragraph>{post.description}</Paragraph>
+            </YStack>
           )
         })}
+        <Paragraph>
+          More work coming soon.
+        </Paragraph>
       </MainContainer>
     </>
   )

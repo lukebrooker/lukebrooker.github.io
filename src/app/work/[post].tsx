@@ -4,8 +4,9 @@ import React from 'react'
 import { MarkdownTheme } from '@/components/MarkdownTheme'
 import { PageHeader } from '@/components/PageHeader'
 import { MainContainer } from '@/components/MainContainer'
-import { FormattedDate } from '@/components/FormattedDate'
 import { meta, site } from '@/Data'
+import { Paragraph } from '@/components/Paragraph'
+import { Link } from '@/components/Link'
 
 export async function generateStaticParams (): Promise<{ post: string }[]> {
   return mdxctx
@@ -16,16 +17,15 @@ export async function generateStaticParams (): Promise<{ post: string }[]> {
 }
 
 // @ts-ignore Type added in build step
-const mdxctx = require.context('../../../work', true, /\.(mdx|js)$/)
+const mdxctx = require.context('../../../content/work', true, /\.(mdx|js)$/)
 
 type PostInfo = {
   title: string
   description: string
   date: string
   slug: string
-  teaserImage: string
-  embedLink: string
-  slidesLink: string
+  tags: string[]
+  image: string
 }
 
 function useData (postId: string): null | {
@@ -113,20 +113,30 @@ export default function Page () {
       <BlogHead info={info} />
       <PageHeader
         title={info.title}
+        titleScale='$8'
+        image={info.image}
         description={info.description}
         breadcrumbLinks={[
           {
             href: '/work',
-            label: 'work'
+            label: 'Work'
           }
         ]}
       >
-        <FormattedDate date={info.date} />
+        <Paragraph typescale='$3' color='$subtle'>
+          {info.tags.map((tag, i) => (
+            <span key={tag}>
+              <span>{tag}</span>
+              <span>{i < info.tags.length - 1 ? ' · ' : ''}</span>
+            </span>
+          ))}
+        </Paragraph>
       </PageHeader>
-      <MainContainer maxWidth={1200}>
+      <MainContainer maxWidth={1000}>
         <MarkdownTheme>
           <MarkdownComponent />
         </MarkdownTheme>
+        <Paragraph>Feel free to contact me (details below) for more info on this project. You can also explore <Link href='/work'>more of my work</Link> or view my <Link href='/resume'>resume</Link>.</Paragraph>
       </MainContainer>
     </>
   )
