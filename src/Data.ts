@@ -3,7 +3,7 @@ export const site = {
   url: 'https://lukebrooker.com',
   author: '@lukebrooker',
   description:
-    'Learn more about Luke Brooker, An product design leader, writer, and speaker based in Brisbane, Australia.'
+    'Learn more about Luke Brooker, a product design leader, writer, and speaker based in Brisbane, Australia.'
 }
 
 export type MetaItemType = {
@@ -28,7 +28,7 @@ export const meta = {
     title: 'Home',
     urlPath: '/',
     description:
-      'Learn more about Luke Brooker, An product design leader, writer, and speaker based in Brisbane, Australia.',
+      'Learn more about Luke Brooker, a product design leader, writer, and speaker based in Brisbane, Australia.',
     image: {
       alt: 'Luke Brooker',
       url: '/images/lukebrooker.jpg'
