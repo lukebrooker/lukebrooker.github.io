@@ -74,7 +74,6 @@ export default function Work () {
               key={post.href}
               borderColor='$thin'
               borderWidth={1}
-              paddingTop='$8'
               borderRadius='$3'
               $gtMd={{
                 gap: '$4',
