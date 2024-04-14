@@ -106,9 +106,6 @@ export default function Work () {
             </YStack>
           )
         })}
-        <Paragraph>
-          More work coming soon.
-        </Paragraph>
       </MainContainer>
     </>
   )
