@@ -19,7 +19,7 @@ export async function generateStaticParams (): Promise<{ post: string }[]> {
 }
 
 // @ts-ignore Type added in build step
-const mdxctx = require.context('../../../speaking', true, /\.(mdx|js)$/)
+const mdxctx = require.context('../../../content/speaking', true, /\.(mdx|js)$/)
 
 type PostInfo = {
   title: string

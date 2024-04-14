@@ -27,7 +27,7 @@ type DataType = {
 }
 
 // @ts-ignore Type added in build step
-const mdxctx = require.context('../../../writing', true, /\.(mdx|js)$/)
+const mdxctx = require.context('../../../content/writing', true, /\.(mdx|js)$/)
 
 const { writing } = meta
 
