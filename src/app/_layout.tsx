@@ -42,9 +42,12 @@ export default function RootLayout () {
 
   const {
     image = {},
+    twitterImage = {},
     title = site.title,
     description = site.description
   } = (meta as { [key: string]: any })[currentPath] || meta.home
+
+  const siteTitle = title === site.title ? title : `${title} · ${site.title}`
 
   const injectMeta = [
     {
@@ -73,10 +76,10 @@ export default function RootLayout () {
       content: `website`
     },
     // Image
-    { property: 'og:image', content: `${site.url}/${image?.url}` },
+    { property: 'og:image', content: `/${image?.url}` },
     {
       property: 'og:image:secure_url',
-      content: `${site.url}/${image?.url?.replace(/^\/+/, '')}`
+      content: `/${image?.url?.replace(/^\/+/, '')}`
     },
     // { property: 'og:image:type', content: image.type },
     { property: 'og:image:width', content: image?.width },
@@ -87,7 +90,7 @@ export default function RootLayout () {
     { name: `twitter:creator`, content: site.author },
     { name: `twitter:title`, content: title },
     { name: `twitter:description`, content: description },
-    { name: `twitter:image`, content: `${site.url}/${image?.url}` },
+    { name: `twitter:image`, content: `/${twitterImage?.url || image?.url}` },
 
     // Fix viewport by disabling scaling
     {
@@ -105,8 +108,6 @@ export default function RootLayout () {
       content: colorScheme
     }
   ]
-
-  const siteTitle = title === site.title ? title : `${title} · ${site.title}`
 
   if (!fontsLoaded && !fontsError) {
     return null

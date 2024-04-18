@@ -1,9 +1,9 @@
 export const site = {
-  title: 'Luke Brooker',
+  title: 'Luke Brooker · Product Design Leader',
   url: 'https://lukebrooker.com',
   author: '@lukebrooker',
   description:
-    'Learn more about Luke Brooker, a product design leader, writer, and speaker based in Brisbane, Australia.'
+    'Learn more about Luke Brooker, a product design leader, writer, and speaker based on the Gold Coast, Australia.'
 }
 
 export type MetaItemType = {
@@ -12,6 +12,10 @@ export type MetaItemType = {
   urlPath: string
   description: string
   image?: {
+    alt: string
+    url: string
+  }
+  twitterImage?: {
     alt: string
     url: string
   }
@@ -25,13 +29,17 @@ export type MetaType = {
 
 export const meta = {
   home: {
-    title: 'Home',
+    title: site.title,
     urlPath: '/',
     description:
-      'Learn more about Luke Brooker, a product design leader, writer, and speaker based in Brisbane, Australia.',
+      'Learn more about Luke Brooker, a product design leader, writer, and speaker based on the Gold Coast, Australia.',
     image: {
       alt: 'Luke Brooker',
-      url: '/images/lukebrooker.jpg'
+      url: 'images/luke-brooker-og-image.jpg'
+    },
+    twitterImage: {
+      alt: 'Luke Brooker',
+      url: 'images/luke-brooker-twitter-image.jpg'
     },
     icon: 'Home',
     status: 'published'
