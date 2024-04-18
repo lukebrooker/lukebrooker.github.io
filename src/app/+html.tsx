@@ -14,6 +14,8 @@ export default function Html ({ children }: { children: React.ReactNode }) {
           name='viewport'
           content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.00001,viewport-fit=cover'
         />
+        <link rel='icon' href='/images/favicon.png' sizes='48x48' />
+        <link rel='icon' href='/images/icon.svg' type='image/svg+xml' />
         <link
           rel='apple-touch-icon'
           sizes='180x180'
